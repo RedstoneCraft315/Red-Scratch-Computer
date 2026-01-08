@@ -1,0 +1,65 @@
+do_a_flip()
+
+
+
+def work(cactus):
+	while True:
+	    for i in range(get_world_size()):
+	    	for j in range(get_world_size()):
+	    		if can_harvest():
+	    			if get_entity_type() == Entities.Cactus and cactus:
+	    				if not measure() == get_pos_x():
+	    					harvest()
+	    				else:
+	    					randomNumb = random()
+	    					if randomNumb < 0.01:
+	    						harvest()
+	    					else:
+	    						quick_print(randomNumb)
+	    			else:
+	    				harvest()
+	    		if get_pos_y() == 0 or get_pos_y() == 7:
+	    			if get_ground_type() == Grounds.Grassland:
+	    				till()
+	    			plant(Entities.Sunflower)
+	    			move(North)
+	    			continue
+	    		if num_items(Items.Hay) < 1000 + num_items(Items.Carrot):
+	    			cactus = False
+	    			if get_ground_type() == Grounds.Grassland:
+	    				if False:
+	    					do_a_flip()
+	    			else:
+	    				till()
+	    		elif num_items(Items.Wood) < 1000 + num_items (Items.Carrot):
+	    			cactus = False
+	    			if get_pos_x() % 2 == 0 and get_pos_y() % 2 == 0 or get_pos_x() % 2 == 1 and get_pos_y() % 2 == 1:
+	    				plant(Entities.Tree)
+	    			else:
+	    				plant(Entities.Bush)
+	    		elif num_items(Items.Carrot) < 1000 + num_items (Items.Pumpkin):
+	    			cactus = False
+	    			if get_ground_type() == Grounds.Soil:
+	    				plant(Entities.Carrot)
+	    			else:
+	    				till()
+	    				plant(Entities.Carrot)
+	    		elif num_items(Items.Pumpkin) < 1000 + num_items (Items.Cactus):
+	    			cactus = False
+	    			if get_ground_type() == Grounds.Soil:
+	    				plant(Entities.Pumpkin)
+	    			else:
+	    				till()
+	    				plant(Entities.Pumpkin)
+	    		else:
+	    			cactus = True
+	    			if not get_pos_x() > 9:
+	    				if get_ground_type() == Grounds.Soil:
+	    					plant(Entities.Cactus)
+	    				else:
+	    					till()
+	    					plant(Entities.Cactus)
+	    			else:
+	    				continue
+	    		move(North)
+	    	move(East)
