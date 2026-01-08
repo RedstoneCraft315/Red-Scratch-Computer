@@ -1,4 +1,4 @@
-# DESCRIPTION: Red's Assembly Compiler — GUI editor + assembler for a custom 8-bit CPU; supports labels, numeric jump rebasing, themes (Light/Dark/Dark green), file I/O, undo/redo, compile (Ctrl+U) and save (Ctrl+S); remembers theme, last opened file, window size & position in config; update this single-line DESCRIPTION when modifying the compiler so future assistants/users have context.
+# DESCRIPTION: Red's Assembly Compiler — GUI editor + assembler for a custom 8-bit CPU; supports labels, numeric jump rebasing, themes (Light/Dark/Dark green), file I/O, undo/redo, compile (Ctrl+U) and save (Ctrl+S); remembers theme, last opened file, and (only when requested via View->Save window position or Ctrl+Alt+G) window size & position in config; update this single-line DESCRIPTION when modifying the compiler so future assistants/users have context.
 import tkinter as tk
 from tkinter import filedialog, messagebox
 import os
@@ -23,8 +23,8 @@ def load_config():
                 cfg = json.load(f)
             current_theme = cfg.get("theme","Light")
             file_path = cfg.get("last_file", None)
-            window_geometry = cfg.get("window_geometry", None)
-        except: 
+            window_geometry = cfg.get("window_geometry", None).replace("1x1","800x600")
+        except:
             current_theme = "Light"
             file_path = None
             window_geometry = None
@@ -33,17 +33,44 @@ def load_config():
         file_path = None
         window_geometry = None
 
-def save_config():
-    cfg = {
-        "theme": current_theme,
-        "last_file": file_path,
-        "window_geometry": root.geometry()
-    }
+def save_config(save_geometry=False):
+    """
+    Save theme and last_file always. Only include window_geometry in the written config
+    if save_geometry=True. This lets us control when geometry gets saved.
+    """
+    # attempt to preserve existing config values where possible
+    cfg = {}
+    if os.path.exists(CONFIG_FILE):
+        try:
+            with open(CONFIG_FILE, "r", encoding="utf-8") as f:
+                cfg = json.load(f)
+        except:
+            cfg = {}
+
+    cfg["theme"] = current_theme
+    cfg["last_file"] = file_path
+    if save_geometry:
+        try:
+            cfg["window_geometry"] = root.geometry()
+        except:
+            pass
+    # if save_geometry is False, we intentionally leave cfg["window_geometry"] as-is (if present)
     try:
         with open(CONFIG_FILE, "w", encoding="utf-8") as f:
             json.dump(cfg, f)
     except:
         pass
+
+def save_window_geometry():
+    """Explicit user action to save current window geometry to config file."""
+    save_config(save_geometry=True)
+    status_var.set("Window position & size saved.")
+    # persistently store window_geometry variable in this session too for immediate use
+    global window_geometry
+    try:
+        window_geometry = root.geometry()
+    except:
+        window_geometry = None
 
 # ---------- Tokenizing & parsing ----------
 def tokenize_line(line):
@@ -90,6 +117,11 @@ editmenu.add_separator()
 editmenu.add_command(label="Options...", command=lambda: open_options_window())
 menubar.add_cascade(label="Edit", menu=editmenu)
 
+# View menu (new) - contains option to explicitly save window position/size
+viewmenu = tk.Menu(menubar, tearoff=False)
+viewmenu.add_command(label="Save window position", accelerator="Ctrl+Alt+G", command=save_window_geometry)
+menubar.add_cascade(label="View", menu=viewmenu)
+
 root.config(menu=menubar)
 frame = tk.Frame(root)
 frame.pack(padx=8,pady=8,fill="both",expand=True)
@@ -128,16 +160,17 @@ status.pack(fill="x", pady=(6,0))
 def apply_theme(theme_name, extra_windows=()):
     global current_theme
     current_theme = theme_name
-    save_config()  # save theme + window state
+    # Save theme (but DO NOT save window geometry here)
+    save_config(save_geometry=False)
 
     if theme_name=="Light":
         bg_in,fg_in,out_bg,out_fg,bad_bg,bad_fg = "white","black","white","black","red","white"
         win_bg,toolbar_bg,btn_bg = "#f0f0f0","#eaeaea","#e8e8e8"
     elif theme_name=="Dark":
-        bg_in,fg_in,out_bg,out_fg,bad_bg,bad_fg = "#1e1e1e","#dcdcdc","#1e1e1e","#dcdcdc","#7f0000","#ffffff"
+        bg_in,fg_in,out_bg,out_fg,bad_bg,bad_fg = "#1e1e1e","#ffffff","#1e1e1e","#ffffff","#ff0000","#ffffff"
         win_bg,toolbar_bg,btn_bg = "#2b2b2b","#2b2b2b","#3a3a3a"
     else:  # Dark green
-        bg_in,fg_in,out_bg,out_fg,bad_bg,bad_fg = "#0B3B0B","#C9FFD1","#0B3B0B","#C9FFD1","#550000","#FFFFFF"
+        bg_in,fg_in,out_bg,out_fg,bad_bg,bad_fg = "#0B3B0B","#C9FFD1","#0B3B0B","#C9FFD1","#FF0000","#FFFFFF"
         win_bg,toolbar_bg,btn_bg = "#0A2A0A","#092509","#09320A"
 
     root.configure(bg=win_bg); frame.configure(bg=win_bg); toolbar.configure(bg=toolbar_bg); status.configure(bg=win_bg)
@@ -343,6 +376,8 @@ def do_open():
         input_box.insert("1.0", content)
         file_path = p
         status_var.set(f"Opened: {file_path}")
+        # persist last opened file to config (but not window geometry)
+        save_config(save_geometry=False)
     except Exception as e:
         messagebox.showerror("Error", f"Failed to open file:\n{e}")
 
@@ -354,6 +389,8 @@ def do_save():
         with open(file_path, "w", encoding="utf-8") as f:
             f.write(input_box.get("1.0", tk.END))
         status_var.set(f"Saved: {file_path}")
+        # update last_file in config (but DO NOT save window geometry here)
+        save_config(save_geometry=False)
     except Exception as e:
         messagebox.showerror("Error", f"Failed to save file:\n{e}")
 
@@ -401,6 +438,10 @@ root.bind_all("<Control-y>", lambda e: on_redo(), add=True)
 root.bind_all("<Control-Y>", lambda e: on_redo(), add=True)
 root.bind_all("<Control-Shift-Z>", lambda e: on_redo(), add=True)
 
+# Bind explicit save-geometry shortcut (Ctrl+Alt+G)
+root.bind_all("<Control-Alt-g>", lambda e: (save_window_geometry(), "break"))
+root.bind_all("<Control-Alt-G>", lambda e: (save_window_geometry(), "break"))
+
 # Start example
 example = (
     "start:\n"
@@ -412,3 +453,4 @@ example = (
 input_box.insert("1.0", example)
 
 root.mainloop()
+ 

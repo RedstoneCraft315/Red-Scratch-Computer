@@ -829,595 +829,59 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(1340,2120)" to="(1360,2120)"/>
     <wire from="(940,2050)" to="(950,2050)"/>
     <wire from="(1000,2420)" to="(1020,2420)"/>
+    <comp lib="0" loc="(860,1950)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="CLOCK"/>
+    </comp>
+    <comp lib="4" loc="(1850,680)" name="Register">
+      <a name="trigger" val="high"/>
+    </comp>
     <comp lib="6" loc="(339,1659)" name="Text">
       <a name="text" val="4"/>
-    </comp>
-    <comp lib="0" loc="(860,1700)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="C --&gt; RAM"/>
-    </comp>
-    <comp lib="0" loc="(1400,1360)" name="Tunnel">
-      <a name="label" val="LOAD RAM"/>
     </comp>
     <comp lib="0" loc="(1390,1600)" name="Tunnel">
       <a name="width" val="8"/>
       <a name="label" val="BUS --&gt; B"/>
     </comp>
-    <comp lib="0" loc="(510,330)" name="Pull Resistor">
-      <a name="facing" val="east"/>
-    </comp>
-    <comp lib="0" loc="(1680,390)" name="Pull Resistor"/>
-    <comp lib="6" loc="(332,2399)" name="Text">
-      <a name="text" val="8"/>
-    </comp>
-    <comp lib="1" loc="(1400,1400)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="4" loc="(1370,1660)" name="D Flip-Flop"/>
-    <comp lib="0" loc="(270,1080)" name="Tunnel">
-      <a name="label" val="JUMPIF="/>
-    </comp>
-    <comp lib="0" loc="(380,300)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="8"/>
-      <a name="label" val="RAM DATA"/>
-    </comp>
-    <comp lib="0" loc="(1020,2440)" name="Pull Resistor"/>
-    <comp lib="1" loc="(1380,2060)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-      <a name="control" val="left"/>
-    </comp>
-    <comp lib="2" loc="(1600,400)" name="Decoder"/>
-    <comp lib="4" loc="(120,500)" name="Register">
-      <a name="trigger" val="high"/>
-    </comp>
-    <comp lib="0" loc="(1010,2460)" name="Pull Resistor">
-      <a name="facing" val="east"/>
-    </comp>
-    <comp lib="0" loc="(880,1590)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="8"/>
-      <a name="label" val="ROM --&gt; BUS"/>
-    </comp>
-    <comp lib="0" loc="(1400,1380)" name="Tunnel">
-      <a name="label" val="COMMAND"/>
-    </comp>
-    <comp lib="0" loc="(2130,1390)" name="Tunnel">
-      <a name="width" val="16"/>
-      <a name="label" val="SCREEN 16"/>
-    </comp>
-    <comp lib="1" loc="(270,2890)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="0" loc="(970,1970)" name="Tunnel">
-      <a name="label" val="COMMAND"/>
-    </comp>
-    <comp lib="0" loc="(1020,2420)" name="Pull Resistor"/>
-    <comp lib="3" loc="(930,2250)" name="Adder"/>
-    <comp lib="1" loc="(930,1620)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-      <a name="control" val="left"/>
-    </comp>
-    <comp lib="0" loc="(2130,850)" name="Tunnel">
-      <a name="width" val="16"/>
-      <a name="label" val="SCREEN 7"/>
-    </comp>
-    <comp lib="0" loc="(160,530)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="LOAD B"/>
-    </comp>
-    <comp lib="0" loc="(840,540)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="CLOCK"/>
-    </comp>
-    <comp lib="1" loc="(970,1840)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="0" loc="(960,1760)" name="Tunnel">
-      <a name="width" val="8"/>
-      <a name="label" val="RAM DATA"/>
-    </comp>
-    <comp lib="0" loc="(1790,1050)" name="Pull Resistor">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="1" loc="(1400,1640)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="0" loc="(100,540)" name="Pull Resistor">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="0" loc="(850,2610)" name="Pull Resistor"/>
-    <comp lib="0" loc="(2120,910)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="incoming" val="16"/>
-      <a name="bit1" val="0"/>
-      <a name="bit2" val="0"/>
-      <a name="bit3" val="0"/>
-      <a name="bit4" val="0"/>
-      <a name="bit5" val="0"/>
-      <a name="bit6" val="0"/>
-      <a name="bit7" val="0"/>
-      <a name="bit8" val="1"/>
-      <a name="bit9" val="1"/>
-      <a name="bit10" val="1"/>
-      <a name="bit11" val="1"/>
-      <a name="bit12" val="1"/>
-      <a name="bit13" val="1"/>
-      <a name="bit14" val="1"/>
-      <a name="bit15" val="1"/>
-    </comp>
-    <comp lib="0" loc="(2030,690)" name="Pull Resistor">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="0" loc="(270,2700)" name="Tunnel">
-      <a name="label" val="RAM --&gt; A"/>
-    </comp>
-    <comp lib="6" loc="(337,1860)" name="Text">
-      <a name="text" val="5"/>
-    </comp>
-    <comp lib="0" loc="(1620,460)" name="Pull Resistor">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="2" loc="(230,3570)" name="Decoder">
-      <a name="select" val="4"/>
-    </comp>
-    <comp lib="0" loc="(1790,870)" name="Pull Resistor">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="0" loc="(450,360)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="SAVE RAM"/>
-    </comp>
-    <comp lib="0" loc="(960,2330)" name="Tunnel">
-      <a name="label" val="COMMAND"/>
-    </comp>
-    <comp lib="0" loc="(1310,1740)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="8"/>
-      <a name="label" val="RAM --&gt; BUS"/>
-    </comp>
-    <comp lib="0" loc="(870,2260)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="8"/>
-      <a name="label" val="B --&gt; BUS"/>
-    </comp>
-    <comp lib="1" loc="(400,280)" name="Buffer">
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="1" loc="(970,2070)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="0" loc="(1400,1640)" name="Tunnel">
-      <a name="label" val="LOAD RAM"/>
-    </comp>
-    <comp lib="0" loc="(1420,2010)" name="Tunnel">
-      <a name="label" val="COMMAND"/>
-    </comp>
-    <comp lib="6" loc="(339,961)" name="Text">
-      <a name="text" val="0"/>
-    </comp>
-    <comp lib="0" loc="(1320,1400)" name="Pull Resistor"/>
-    <comp lib="4" loc="(120,640)" name="Register">
-      <a name="trigger" val="high"/>
-    </comp>
-    <comp lib="0" loc="(880,2100)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="8"/>
-      <a name="label" val="ROM --&gt; BUS"/>
-    </comp>
-    <comp lib="2" loc="(230,1410)" name="Decoder">
-      <a name="select" val="4"/>
-    </comp>
-    <comp lib="0" loc="(890,1860)" name="Pull Resistor"/>
-    <comp lib="1" loc="(900,2180)" name="Buffer"/>
-    <comp lib="0" loc="(270,3250)" name="Tunnel">
-      <a name="label" val="RAM --&gt; DISPLAY"/>
-    </comp>
-    <comp lib="1" loc="(1400,1540)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="0" loc="(960,2190)" name="Tunnel">
-      <a name="label" val="LOAD B"/>
-    </comp>
-    <comp lib="0" loc="(1790,510)" name="Pull Resistor">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="0" loc="(2030,1110)" name="Pull Resistor">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="0" loc="(1790,990)" name="Pull Resistor">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="0" loc="(410,280)" name="Pull Resistor"/>
-    <comp lib="0" loc="(970,1840)" name="Tunnel">
-      <a name="label" val="SAVE A"/>
-    </comp>
-    <comp lib="0" loc="(80,500)" name="Pull Resistor"/>
-    <comp lib="1" loc="(1360,1900)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-      <a name="control" val="left"/>
-    </comp>
-    <comp lib="1" loc="(920,2420)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-      <a name="control" val="left"/>
-    </comp>
-    <comp lib="0" loc="(270,3060)" name="Tunnel">
-      <a name="label" val="RAM --&gt; B"/>
-    </comp>
-    <comp lib="4" loc="(940,1540)" name="D Flip-Flop"/>
-    <comp lib="1" loc="(930,1760)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-      <a name="control" val="left"/>
-    </comp>
-    <comp lib="1" loc="(170,350)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(1310,2030)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="RAM --&gt; DISPLAY"/>
-    </comp>
-    <comp lib="0" loc="(1420,2130)" name="Tunnel">
-      <a name="label" val="LOAD RAM"/>
-    </comp>
-    <comp lib="0" loc="(930,2440)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="8"/>
-      <a name="label" val="A --&gt; BUS"/>
-    </comp>
-    <comp lib="0" loc="(80,640)" name="Pull Resistor"/>
-    <comp lib="1" loc="(1360,1710)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-      <a name="control" val="left"/>
-    </comp>
-    <comp lib="5" loc="(420,410)" name="DotMatrix">
-      <a name="inputtype" val="row"/>
-      <a name="matrixcols" val="16"/>
-      <a name="matrixrows" val="16"/>
-    </comp>
-    <comp lib="0" loc="(880,1450)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="8"/>
-      <a name="label" val="ROM --&gt; BUS"/>
-    </comp>
-    <comp lib="0" loc="(820,2610)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="A --&gt; PROVE"/>
-    </comp>
-    <comp lib="1" loc="(1420,2010)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="0" loc="(50,550)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="SAVE B"/>
-    </comp>
-    <comp lib="1" loc="(1360,1460)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-      <a name="control" val="left"/>
-    </comp>
-    <comp lib="0" loc="(930,2570)" name="Tunnel">
-      <a name="width" val="8"/>
-      <a name="label" val="PROVE"/>
-    </comp>
-    <comp lib="0" loc="(1350,2350)" name="Pull Resistor"/>
-    <comp lib="0" loc="(1310,2060)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="8"/>
-      <a name="label" val="ROM --&gt; BUS"/>
-    </comp>
-    <comp lib="0" loc="(880,2000)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="8"/>
-      <a name="label" val="ROM --&gt; BUS"/>
-    </comp>
-    <comp lib="1" loc="(1310,1680)" name="Buffer"/>
-    <comp lib="0" loc="(190,1050)" name="Pull Resistor"/>
-    <comp lib="0" loc="(970,1950)" name="Tunnel">
-      <a name="label" val="SAVE B"/>
-    </comp>
-    <comp lib="0" loc="(270,1070)" name="Tunnel">
-      <a name="label" val="JUMP"/>
-    </comp>
-    <comp lib="0" loc="(1400,1870)" name="Tunnel">
-      <a name="label" val="COMMAND"/>
-    </comp>
-    <comp lib="1" loc="(1610,450)" name="Buffer">
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(90,800)" name="Tunnel">
-      <a name="label" val="COMMAND"/>
-    </comp>
-    <comp lib="2" loc="(230,1430)" name="Decoder">
-      <a name="selloc" val="tr"/>
-      <a name="select" val="4"/>
-    </comp>
-    <comp lib="0" loc="(2030,1050)" name="Pull Resistor">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="4" loc="(120,350)" name="Register">
-      <a name="trigger" val="high"/>
-    </comp>
-    <comp lib="4" loc="(2090,860)" name="Register">
-      <a name="trigger" val="high"/>
-    </comp>
-    <comp lib="1" loc="(450,340)" name="Buffer">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="0" loc="(2120,790)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="incoming" val="16"/>
-      <a name="bit1" val="0"/>
-      <a name="bit2" val="0"/>
-      <a name="bit3" val="0"/>
-      <a name="bit4" val="0"/>
-      <a name="bit5" val="0"/>
-      <a name="bit6" val="0"/>
-      <a name="bit7" val="0"/>
-      <a name="bit8" val="1"/>
-      <a name="bit9" val="1"/>
-      <a name="bit10" val="1"/>
-      <a name="bit11" val="1"/>
-      <a name="bit12" val="1"/>
-      <a name="bit13" val="1"/>
-      <a name="bit14" val="1"/>
-      <a name="bit15" val="1"/>
-    </comp>
-    <comp lib="0" loc="(410,470)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="16"/>
-      <a name="label" val="SCREEN 7"/>
-    </comp>
-    <comp lib="0" loc="(1420,2030)" name="Tunnel">
-      <a name="label" val="LOAD RAM"/>
-    </comp>
-    <comp lib="0" loc="(270,1610)" name="Tunnel">
-      <a name="label" val="ADD A + B"/>
-    </comp>
-    <comp lib="0" loc="(970,2050)" name="Tunnel">
-      <a name="label" val="SAVE C"/>
-    </comp>
-    <comp lib="6" loc="(356,1511)" name="Text">
-      <a name="text" val="3"/>
-    </comp>
-    <comp lib="0" loc="(860,1400)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="CLOCK"/>
-    </comp>
-    <comp lib="6" loc="(331,2768)" name="Text">
-      <a name="text" val="a"/>
-    </comp>
-    <comp lib="0" loc="(960,1590)" name="Tunnel">
+    <comp lib="0" loc="(570,640)" name="Probe"/>
+    <comp lib="0" loc="(1390,1430)" name="Tunnel">
       <a name="width" val="8"/>
       <a name="label" val="RAM ADDRESS"/>
     </comp>
-    <comp lib="1" loc="(1400,1870)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="1" loc="(950,2250)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-      <a name="control" val="left"/>
-    </comp>
-    <comp lib="0" loc="(2130,1210)" name="Tunnel">
-      <a name="width" val="16"/>
-      <a name="label" val="SCREEN 13"/>
+    <comp lib="4" loc="(890,2570)" name="Register">
+      <a name="trigger" val="high"/>
     </comp>
     <comp lib="0" loc="(930,2180)" name="Pull Resistor"/>
-    <comp lib="0" loc="(1310,1600)" name="Tunnel">
+    <comp lib="0" loc="(1280,2090)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="width" val="8"/>
       <a name="label" val="RAM --&gt; BUS"/>
-    </comp>
-    <comp lib="0" loc="(1790,930)" name="Pull Resistor">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="0" loc="(970,1540)" name="Tunnel">
-      <a name="label" val="COMMAND"/>
-    </comp>
-    <comp lib="0" loc="(380,280)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="8"/>
-      <a name="label" val="RAM ADDRESS"/>
-    </comp>
-    <comp lib="0" loc="(760,510)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="8"/>
-      <a name="label" val="CLOCK CYCLE"/>
     </comp>
     <comp lib="0" loc="(190,3590)" name="Pull Resistor">
       <a name="facing" val="north"/>
     </comp>
-    <comp lib="0" loc="(1310,2010)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="CLOCK"/>
-    </comp>
-    <comp lib="0" loc="(2130,1030)" name="Tunnel">
-      <a name="width" val="16"/>
-      <a name="label" val="SCREEN 10"/>
-    </comp>
-    <comp lib="4" loc="(940,1950)" name="D Flip-Flop"/>
-    <comp lib="0" loc="(950,2000)" name="Tunnel">
-      <a name="width" val="8"/>
-      <a name="label" val="BUS --&gt; B"/>
-    </comp>
-    <comp lib="0" loc="(190,1430)" name="Pull Resistor">
+    <comp lib="0" loc="(190,2150)" name="Pull Resistor">
       <a name="facing" val="north"/>
     </comp>
-    <comp lib="1" loc="(1360,1570)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-      <a name="control" val="left"/>
-    </comp>
-    <comp lib="0" loc="(760,450)" name="Tunnel">
+    <comp lib="0" loc="(190,640)" name="Pull Resistor"/>
+    <comp lib="0" loc="(850,2310)" name="Tunnel">
       <a name="facing" val="east"/>
-      <a name="label" val="SAVE CYCLE"/>
-    </comp>
-    <comp lib="0" loc="(1310,1900)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="8"/>
-      <a name="label" val="ROM --&gt; BUS"/>
-    </comp>
-    <comp lib="1" loc="(450,620)" name="AND Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="0" loc="(1430,2330)" name="Tunnel">
-      <a name="label" val="COMMAND"/>
-    </comp>
-    <comp lib="0" loc="(1290,1540)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="RAM --&gt; B"/>
-    </comp>
-    <comp lib="1" loc="(70,500)" name="Buffer">
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(100,680)" name="Pull Resistor">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="0" loc="(1430,2500)" name="Tunnel">
-      <a name="width" val="8"/>
-      <a name="label" val="RAM DATA"/>
-    </comp>
-    <comp lib="1" loc="(970,1700)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="0" loc="(2120,1390)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="incoming" val="16"/>
-      <a name="bit1" val="0"/>
-      <a name="bit2" val="0"/>
-      <a name="bit3" val="0"/>
-      <a name="bit4" val="0"/>
-      <a name="bit5" val="0"/>
-      <a name="bit6" val="0"/>
-      <a name="bit7" val="0"/>
-      <a name="bit8" val="1"/>
-      <a name="bit9" val="1"/>
-      <a name="bit10" val="1"/>
-      <a name="bit11" val="1"/>
-      <a name="bit12" val="1"/>
-      <a name="bit13" val="1"/>
-      <a name="bit14" val="1"/>
-      <a name="bit15" val="1"/>
+      <a name="label" val="CLOCK"/>
     </comp>
     <comp lib="0" loc="(410,550)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="width" val="16"/>
       <a name="label" val="SCREEN 15"/>
     </comp>
-    <comp lib="0" loc="(190,1770)" name="Pull Resistor"/>
-    <comp lib="1" loc="(970,1420)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="0" loc="(1420,2150)" name="Tunnel">
-      <a name="label" val="SCREEN SAVE"/>
-    </comp>
-    <comp lib="0" loc="(100,390)" name="Pull Resistor">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="6" loc="(359,3677)" name="Text">
-      <a name="text" val="f"/>
-    </comp>
-    <comp lib="4" loc="(560,280)" name="RAM">
-      <a name="bus" val="separate"/>
-    </comp>
-    <comp lib="1" loc="(1400,1500)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="0" loc="(1790,1230)" name="Pull Resistor">
+    <comp lib="0" loc="(50,510)" name="Tunnel">
       <a name="facing" val="north"/>
+      <a name="width" val="8"/>
+      <a name="label" val="BUS --&gt; B"/>
     </comp>
-    <comp lib="0" loc="(2130,1150)" name="Tunnel">
+    <comp lib="0" loc="(410,470)" name="Tunnel">
+      <a name="facing" val="east"/>
       <a name="width" val="16"/>
-      <a name="label" val="SCREEN 12"/>
-    </comp>
-    <comp lib="0" loc="(780,450)" name="Pull Resistor"/>
-    <comp lib="0" loc="(1790,810)" name="Pull Resistor">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="0" loc="(970,1680)" name="Tunnel">
-      <a name="label" val="COMMAND"/>
-    </comp>
-    <comp lib="0" loc="(880,1760)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="8"/>
-      <a name="label" val="C --&gt; BUS"/>
-    </comp>
-    <comp lib="0" loc="(2130,1330)" name="Tunnel">
-      <a name="width" val="16"/>
-      <a name="label" val="SCREEN 15"/>
-    </comp>
-    <comp lib="1" loc="(1400,1520)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="0" loc="(1420,2200)" name="Tunnel">
-      <a name="width" val="8"/>
-      <a name="label" val="RAM ADDRESS"/>
-    </comp>
-    <comp lib="0" loc="(1390,1900)" name="Tunnel">
-      <a name="width" val="8"/>
-      <a name="label" val="CLOCK CYCLE"/>
-    </comp>
-    <comp lib="4" loc="(940,1840)" name="D Flip-Flop"/>
-    <comp lib="0" loc="(870,2240)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="8"/>
-      <a name="label" val="A --&gt; BUS"/>
-    </comp>
-    <comp lib="0" loc="(1400,1660)" name="Tunnel">
-      <a name="label" val="COMMAND"/>
-    </comp>
-    <comp lib="0" loc="(950,2390)" name="Tunnel">
-      <a name="width" val="8"/>
-      <a name="label" val="RAM ADDRESS"/>
-    </comp>
-    <comp lib="0" loc="(810,510)" name="Pull Resistor">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="3" loc="(1000,2430)" name="Comparator"/>
-    <comp lib="0" loc="(2130,550)" name="Tunnel">
-      <a name="width" val="16"/>
-      <a name="label" val="SCREEN 2"/>
-    </comp>
-    <comp lib="1" loc="(20,840)" name="AND Gate">
-      <a name="facing" val="south"/>
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="4" loc="(1850,980)" name="Register">
-      <a name="trigger" val="high"/>
-    </comp>
-    <comp lib="1" loc="(70,680)" name="Buffer"/>
-    <comp lib="0" loc="(2130,610)" name="Tunnel">
-      <a name="width" val="16"/>
-      <a name="label" val="SCREEN 3"/>
-    </comp>
-    <comp lib="2" loc="(230,3230)" name="Decoder">
-      <a name="selloc" val="tr"/>
-      <a name="select" val="4"/>
-    </comp>
-    <comp lib="0" loc="(1290,1660)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="CLOCK"/>
-    </comp>
-    <comp lib="4" loc="(2090,920)" name="Register">
-      <a name="trigger" val="high"/>
-    </comp>
-    <comp lib="1" loc="(70,390)" name="Buffer"/>
-    <comp lib="0" loc="(1280,2090)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="8"/>
-      <a name="label" val="RAM --&gt; BUS"/>
-    </comp>
-    <comp lib="0" loc="(870,2180)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="ADD A + B"/>
-    </comp>
-    <comp lib="1" loc="(1420,2130)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="4" loc="(1850,500)" name="Register">
-      <a name="trigger" val="high"/>
-    </comp>
-    <comp lib="0" loc="(1400,1520)" name="Tunnel">
-      <a name="label" val="COMMAND"/>
+      <a name="label" val="SCREEN 7"/>
     </comp>
     <comp lib="0" loc="(2120,670)" name="Splitter">
       <a name="facing" val="west"/>
@@ -1438,1053 +902,199 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="bit14" val="1"/>
       <a name="bit15" val="1"/>
     </comp>
-    <comp lib="6" loc="(358,3486)" name="Text">
-      <a name="text" val="e"/>
-    </comp>
-    <comp lib="1" loc="(70,540)" name="Buffer"/>
-    <comp lib="0" loc="(1390,1570)" name="Tunnel">
-      <a name="width" val="8"/>
-      <a name="label" val="RAM ADDRESS"/>
-    </comp>
-    <comp lib="1" loc="(270,1610)" name="Buffer">
+    <comp lib="1" loc="(960,2220)" name="Buffer">
       <a name="out" val="Z1"/>
     </comp>
-    <comp lib="4" loc="(1370,1380)" name="D Flip-Flop"/>
-    <comp lib="0" loc="(1320,1540)" name="Pull Resistor"/>
-    <comp lib="4" loc="(1390,2150)" name="D Flip-Flop"/>
-    <comp lib="0" loc="(410,430)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="16"/>
-      <a name="label" val="SCREEN 3"/>
-    </comp>
-    <comp lib="0" loc="(160,670)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="LOAD C"/>
-    </comp>
-    <comp lib="4" loc="(890,2570)" name="Register">
-      <a name="trigger" val="high"/>
-    </comp>
-    <comp lib="1" loc="(970,2050)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="0" loc="(610,690)" name="Tunnel">
-      <a name="width" val="8"/>
-      <a name="label" val="ROM --&gt; BUS"/>
-    </comp>
-    <comp lib="0" loc="(970,1700)" name="Tunnel">
-      <a name="label" val="SAVE RAM"/>
-    </comp>
-    <comp lib="0" loc="(450,620)" name="Tunnel">
-      <a name="label" val="CLOCK"/>
-    </comp>
-    <comp lib="4" loc="(1850,1400)" name="Register">
-      <a name="trigger" val="high"/>
-    </comp>
-    <comp lib="1" loc="(960,2330)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="0" loc="(950,1890)" name="Tunnel">
-      <a name="width" val="8"/>
-      <a name="label" val="BUS --&gt; A"/>
-    </comp>
-    <comp lib="1" loc="(1400,1380)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="2" loc="(230,2510)" name="Decoder">
-      <a name="selloc" val="tr"/>
-      <a name="select" val="4"/>
-    </comp>
-    <comp lib="0" loc="(190,360)" name="Pull Resistor">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="0" loc="(850,350)" name="Probe">
-      <a name="radix" val="10unsigned"/>
-    </comp>
-    <comp lib="4" loc="(940,2050)" name="D Flip-Flop"/>
-    <comp lib="4" loc="(2090,620)" name="Register">
-      <a name="trigger" val="high"/>
-    </comp>
-    <comp lib="4" loc="(1850,1220)" name="Register">
-      <a name="trigger" val="high"/>
-    </comp>
-    <comp lib="1" loc="(960,2310)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="0" loc="(190,2510)" name="Pull Resistor">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="0" loc="(880,1730)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="8"/>
-      <a name="label" val="ROM --&gt; BUS"/>
-    </comp>
-    <comp lib="0" loc="(1310,1460)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="8"/>
-      <a name="label" val="RAM --&gt; BUS"/>
-    </comp>
-    <comp lib="1" loc="(930,1450)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-      <a name="control" val="left"/>
-    </comp>
-    <comp lib="1" loc="(270,2880)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="1" loc="(960,2190)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="1" loc="(1340,2350)" name="Buffer"/>
-    <comp lib="1" loc="(1360,1430)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-      <a name="control" val="left"/>
-    </comp>
-    <comp lib="1" loc="(840,2610)" name="Buffer"/>
-    <comp lib="2" loc="(230,1050)" name="Decoder">
-      <a name="select" val="4"/>
-    </comp>
-    <comp lib="0" loc="(1790,1170)" name="Pull Resistor">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="0" loc="(1290,1870)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="JUMP"/>
-    </comp>
-    <comp lib="4" loc="(930,2310)" name="D Flip-Flop"/>
-    <comp lib="0" loc="(1320,2350)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="ROM --&gt; RAM"/>
-    </comp>
-    <comp lib="0" loc="(160,380)" name="Tunnel">
-      <a name="facing" val="north"/>
+    <comp lib="0" loc="(970,1380)" name="Tunnel">
       <a name="label" val="LOAD A"/>
-    </comp>
-    <comp lib="1" loc="(970,1560)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="1" loc="(1380,2230)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-      <a name="control" val="left"/>
-    </comp>
-    <comp lib="2" loc="(230,1790)" name="Decoder">
-      <a name="selloc" val="tr"/>
-      <a name="select" val="4"/>
-    </comp>
-    <comp lib="0" loc="(2130,670)" name="Tunnel">
-      <a name="width" val="16"/>
-      <a name="label" val="SCREEN 4"/>
-    </comp>
-    <comp lib="0" loc="(960,2350)" name="Tunnel">
-      <a name="label" val="LOAD A"/>
-    </comp>
-    <comp lib="0" loc="(1040,2460)" name="Tunnel">
-      <a name="label" val="JUMP"/>
-    </comp>
-    <comp lib="1" loc="(1400,1360)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="0" loc="(960,1480)" name="Tunnel">
-      <a name="width" val="8"/>
-      <a name="label" val="RAM DATA"/>
-    </comp>
-    <comp lib="1" loc="(270,3230)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="0" loc="(870,2420)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="8"/>
-      <a name="label" val="RAM --&gt; BUS"/>
-    </comp>
-    <comp lib="4" loc="(2090,500)" name="Register">
-      <a name="trigger" val="high"/>
-    </comp>
-    <comp lib="0" loc="(410,450)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="16"/>
-      <a name="label" val="SCREEN 5"/>
-    </comp>
-    <comp lib="0" loc="(2120,1150)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="incoming" val="16"/>
-      <a name="bit1" val="0"/>
-      <a name="bit2" val="0"/>
-      <a name="bit3" val="0"/>
-      <a name="bit4" val="0"/>
-      <a name="bit5" val="0"/>
-      <a name="bit6" val="0"/>
-      <a name="bit7" val="0"/>
-      <a name="bit8" val="1"/>
-      <a name="bit9" val="1"/>
-      <a name="bit10" val="1"/>
-      <a name="bit11" val="1"/>
-      <a name="bit12" val="1"/>
-      <a name="bit13" val="1"/>
-      <a name="bit14" val="1"/>
-      <a name="bit15" val="1"/>
-    </comp>
-    <comp lib="0" loc="(1340,2030)" name="Pull Resistor"/>
-    <comp lib="0" loc="(2130,1270)" name="Tunnel">
-      <a name="width" val="16"/>
-      <a name="label" val="SCREEN 14"/>
-    </comp>
-    <comp lib="0" loc="(870,2390)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="8"/>
-      <a name="label" val="ROM --&gt; BUS"/>
-    </comp>
-    <comp lib="0" loc="(960,1730)" name="Tunnel">
-      <a name="width" val="8"/>
-      <a name="label" val="RAM ADDRESS"/>
-    </comp>
-    <comp lib="0" loc="(270,2890)" name="Tunnel">
-      <a name="label" val="B --&gt; RAM"/>
-    </comp>
-    <comp lib="0" loc="(2130,970)" name="Tunnel">
-      <a name="width" val="16"/>
-      <a name="label" val="SCREEN 9"/>
-    </comp>
-    <comp lib="2" loc="(230,2490)" name="Decoder">
-      <a name="select" val="4"/>
-    </comp>
-    <comp lib="4" loc="(1400,2450)" name="D Flip-Flop"/>
-    <comp lib="1" loc="(780,450)" name="Buffer"/>
-    <comp lib="1" loc="(70,350)" name="Buffer">
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(50,510)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="width" val="8"/>
-      <a name="label" val="BUS --&gt; B"/>
-    </comp>
-    <comp lib="1" loc="(270,3270)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="0" loc="(50,650)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="width" val="8"/>
-      <a name="label" val="BUS --&gt; C"/>
-    </comp>
-    <comp lib="1" loc="(1330,2030)" name="Buffer"/>
-    <comp lib="0" loc="(1430,2450)" name="Tunnel">
-      <a name="label" val="SAVE RAM"/>
-    </comp>
-    <comp lib="0" loc="(1420,2090)" name="Tunnel">
-      <a name="width" val="8"/>
-      <a name="label" val="SCREEN DATA"/>
-    </comp>
-    <comp lib="0" loc="(50,690)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="SAVE C"/>
-    </comp>
-    <comp lib="1" loc="(1360,1740)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-      <a name="control" val="left"/>
-    </comp>
-    <comp lib="0" loc="(190,350)" name="Pull Resistor"/>
-    <comp lib="0" loc="(2030,1230)" name="Pull Resistor">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="6" loc="(337,2209)" name="Text">
-      <a name="text" val="7"/>
-    </comp>
-    <comp lib="4" loc="(940,1680)" name="D Flip-Flop"/>
-    <comp lib="4" loc="(2090,1160)" name="Register">
-      <a name="trigger" val="high"/>
-    </comp>
-    <comp lib="1" loc="(1420,2150)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="1" loc="(790,510)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-      <a name="control" val="left"/>
-    </comp>
-    <comp lib="0" loc="(570,640)" name="Probe"/>
-    <comp lib="1" loc="(970,1680)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="0" loc="(1540,410)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="8"/>
-      <a name="label" val="SCREEN SECTOR"/>
-    </comp>
-    <comp lib="0" loc="(1790,1410)" name="Pull Resistor">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="0" loc="(890,1560)" name="Pull Resistor"/>
-    <comp lib="0" loc="(1390,1430)" name="Tunnel">
-      <a name="width" val="8"/>
-      <a name="label" val="RAM ADDRESS"/>
-    </comp>
-    <comp lib="0" loc="(860,1950)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="CLOCK"/>
-    </comp>
-    <comp lib="0" loc="(2030,570)" name="Pull Resistor">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="4" loc="(1370,1520)" name="D Flip-Flop"/>
-    <comp lib="1" loc="(970,1950)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="0" loc="(1790,630)" name="Pull Resistor">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="0" loc="(2030,630)" name="Pull Resistor">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="0" loc="(960,2250)" name="Tunnel">
-      <a name="width" val="8"/>
-      <a name="label" val="BUS --&gt; C"/>
-    </comp>
-    <comp lib="0" loc="(270,2870)" name="Tunnel">
-      <a name="label" val="ROM --&gt; B"/>
-    </comp>
-    <comp lib="0" loc="(1290,2400)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="8"/>
-      <a name="label" val="ROM --&gt; BUS"/>
-    </comp>
-    <comp lib="0" loc="(190,3570)" name="Pull Resistor"/>
-    <comp lib="0" loc="(190,1790)" name="Pull Resistor">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="0" loc="(1390,1460)" name="Tunnel">
-      <a name="width" val="8"/>
-      <a name="label" val="BUS --&gt; A"/>
-    </comp>
-    <comp lib="1" loc="(960,2350)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="0" loc="(1790,1290)" name="Pull Resistor">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="0" loc="(1570,410)" name="Splitter">
-      <a name="incoming" val="8"/>
-      <a name="appear" val="right"/>
-      <a name="bit2" val="1"/>
-      <a name="bit3" val="1"/>
-      <a name="bit4" val="1"/>
-      <a name="bit5" val="none"/>
-      <a name="bit6" val="none"/>
-      <a name="bit7" val="none"/>
-    </comp>
-    <comp lib="4" loc="(2090,980)" name="Register">
-      <a name="trigger" val="high"/>
-    </comp>
-    <comp lib="4" loc="(1850,620)" name="Register">
-      <a name="trigger" val="high"/>
-    </comp>
-    <comp lib="4" loc="(1390,2400)" name="Register">
-      <a name="trigger" val="high"/>
-    </comp>
-    <comp lib="0" loc="(860,1680)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="CLOCK"/>
-    </comp>
-    <comp lib="0" loc="(190,1410)" name="Pull Resistor"/>
-    <comp lib="0" loc="(410,410)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="16"/>
-      <a name="label" val="SCREEN 1"/>
-    </comp>
-    <comp lib="0" loc="(2030,750)" name="Pull Resistor">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="0" loc="(410,630)" name="Clock"/>
-    <comp lib="0" loc="(880,1620)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="8"/>
-      <a name="label" val="B --&gt; BUS"/>
-    </comp>
-    <comp lib="4" loc="(2090,1400)" name="Register">
-      <a name="trigger" val="high"/>
-    </comp>
-    <comp lib="2" loc="(1630,430)" name="Decoder">
-      <a name="facing" val="south"/>
-      <a name="select" val="4"/>
-    </comp>
-    <comp lib="0" loc="(410,560)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="16"/>
-      <a name="label" val="SCREEN 16"/>
-    </comp>
-    <comp lib="1" loc="(510,340)" name="Buffer">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="1" loc="(270,2700)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="1" loc="(1400,1680)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="0" loc="(50,360)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="width" val="8"/>
-      <a name="label" val="BUS --&gt; A"/>
-    </comp>
-    <comp lib="0" loc="(510,360)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="LOAD RAM"/>
-    </comp>
-    <comp lib="0" loc="(1390,1740)" name="Tunnel">
-      <a name="width" val="8"/>
-      <a name="label" val="BUS --&gt; C"/>
-    </comp>
-    <comp lib="0" loc="(2030,1410)" name="Pull Resistor">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="0" loc="(270,2690)" name="Tunnel">
-      <a name="label" val="ROM --&gt; A"/>
-    </comp>
-    <comp lib="1" loc="(1400,1850)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="1" loc="(170,500)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(1390,1710)" name="Tunnel">
-      <a name="width" val="8"/>
-      <a name="label" val="RAM ADDRESS"/>
-    </comp>
-    <comp lib="0" loc="(380,350)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="CLOCK"/>
-    </comp>
-    <comp lib="1" loc="(920,2390)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-      <a name="control" val="left"/>
-    </comp>
-    <comp lib="1" loc="(1430,2450)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="0" loc="(2130,490)" name="Tunnel">
-      <a name="width" val="16"/>
-      <a name="label" val="SCREEN 1"/>
-    </comp>
-    <comp lib="0" loc="(860,1970)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="ROM --&gt; B"/>
-    </comp>
-    <comp lib="1" loc="(810,500)" name="NOT Gate">
-      <a name="size" val="20"/>
-    </comp>
-    <comp lib="0" loc="(230,830)" name="Tunnel">
-      <a name="width" val="8"/>
-      <a name="label" val="ROM --&gt; BUS"/>
-    </comp>
-    <comp lib="4" loc="(1850,740)" name="Register">
-      <a name="trigger" val="high"/>
-    </comp>
-    <comp lib="4" loc="(1390,2010)" name="D Flip-Flop"/>
-    <comp lib="6" loc="(338,2591)" name="Text">
-      <a name="text" val="9"/>
-    </comp>
-    <comp lib="0" loc="(2120,730)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="incoming" val="16"/>
-      <a name="bit1" val="0"/>
-      <a name="bit2" val="0"/>
-      <a name="bit3" val="0"/>
-      <a name="bit4" val="0"/>
-      <a name="bit5" val="0"/>
-      <a name="bit6" val="0"/>
-      <a name="bit7" val="0"/>
-      <a name="bit8" val="1"/>
-      <a name="bit9" val="1"/>
-      <a name="bit10" val="1"/>
-      <a name="bit11" val="1"/>
-      <a name="bit12" val="1"/>
-      <a name="bit13" val="1"/>
-      <a name="bit14" val="1"/>
-      <a name="bit15" val="1"/>
-    </comp>
-    <comp lib="0" loc="(1790,1350)" name="Pull Resistor">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="1" loc="(400,300)" name="Buffer">
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(970,1420)" name="Tunnel">
-      <a name="label" val="SAVE RAM"/>
-    </comp>
-    <comp lib="0" loc="(2130,910)" name="Tunnel">
-      <a name="width" val="16"/>
-      <a name="label" val="SCREEN 8"/>
-    </comp>
-    <comp lib="0" loc="(1080,2430)" name="Tunnel">
-      <a name="label" val="COMMAND"/>
-    </comp>
-    <comp lib="6" loc="(325,2940)" name="Text">
-      <a name="text" val="b"/>
-    </comp>
-    <comp lib="0" loc="(410,460)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="16"/>
-      <a name="label" val="SCREEN 6"/>
-    </comp>
-    <comp lib="1" loc="(270,3250)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="0" loc="(1630,370)" name="Pull Resistor"/>
-    <comp lib="0" loc="(860,1560)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="B --&gt; RAM"/>
-    </comp>
-    <comp lib="1" loc="(1300,2090)" name="Buffer">
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="1" loc="(1430,2470)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="0" loc="(970,1860)" name="Tunnel">
-      <a name="label" val="COMMAND"/>
-    </comp>
-    <comp lib="0" loc="(270,3050)" name="Tunnel">
-      <a name="label" val="ROM --&gt; C"/>
-    </comp>
-    <comp lib="4" loc="(1850,680)" name="Register">
-      <a name="trigger" val="high"/>
-    </comp>
-    <comp lib="0" loc="(220,280)" name="Tunnel">
-      <a name="width" val="8"/>
-      <a name="label" val="PROVE"/>
-    </comp>
-    <comp lib="0" loc="(570,620)" name="Probe">
-      <a name="radix" val="16"/>
-    </comp>
-    <comp lib="0" loc="(2030,1350)" name="Pull Resistor">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="0" loc="(960,1450)" name="Tunnel">
-      <a name="width" val="8"/>
-      <a name="label" val="RAM ADDRESS"/>
-    </comp>
-    <comp lib="1" loc="(1420,2170)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="0" loc="(1790,750)" name="Pull Resistor">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="0" loc="(410,610)" name="Pin">
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp lib="0" loc="(960,2310)" name="Tunnel">
-      <a name="label" val="LOAD RAM"/>
-    </comp>
-    <comp lib="6" loc="(1634,38)" name="Text">
-      <a name="text" val="SCRATCH PC ________________________________________________ SCRATCH PC _____________________________________________________SCRATCH PC ______________________________________________________SCRATCH PC________________________________________________________________ SCRATCH PC"/>
-    </comp>
-    <comp lib="0" loc="(1290,1400)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="RAM --&gt; A"/>
-    </comp>
-    <comp lib="0" loc="(2130,1090)" name="Tunnel">
-      <a name="width" val="16"/>
-      <a name="label" val="SCREEN 11"/>
     </comp>
     <comp lib="0" loc="(1310,1710)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="width" val="8"/>
       <a name="label" val="ROM --&gt; BUS"/>
     </comp>
-    <comp lib="0" loc="(890,1700)" name="Pull Resistor"/>
-    <comp lib="0" loc="(2120,1030)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="incoming" val="16"/>
-      <a name="bit1" val="0"/>
-      <a name="bit2" val="0"/>
-      <a name="bit3" val="0"/>
-      <a name="bit4" val="0"/>
-      <a name="bit5" val="0"/>
-      <a name="bit6" val="0"/>
-      <a name="bit7" val="0"/>
-      <a name="bit8" val="1"/>
-      <a name="bit9" val="1"/>
-      <a name="bit10" val="1"/>
-      <a name="bit11" val="1"/>
-      <a name="bit12" val="1"/>
-      <a name="bit13" val="1"/>
-      <a name="bit14" val="1"/>
-      <a name="bit15" val="1"/>
-    </comp>
-    <comp lib="1" loc="(960,2160)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="0" loc="(810,460)" name="Constant">
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="4" loc="(2090,1340)" name="Register">
-      <a name="trigger" val="high"/>
-    </comp>
-    <comp lib="1" loc="(960,2220)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="1" loc="(880,1700)" name="Buffer"/>
-    <comp lib="0" loc="(1430,2470)" name="Tunnel">
+    <comp lib="0" loc="(960,2330)" name="Tunnel">
       <a name="label" val="COMMAND"/>
     </comp>
-    <comp lib="4" loc="(1850,1340)" name="Register">
+    <comp lib="4" loc="(940,1840)" name="D Flip-Flop"/>
+    <comp lib="1" loc="(20,840)" name="AND Gate">
+      <a name="facing" val="south"/>
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="4" loc="(2090,980)" name="Register">
       <a name="trigger" val="high"/>
+    </comp>
+    <comp lib="4" loc="(1850,980)" name="Register">
+      <a name="trigger" val="high"/>
+    </comp>
+    <comp lib="0" loc="(870,2420)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="8"/>
+      <a name="label" val="RAM --&gt; BUS"/>
+    </comp>
+    <comp lib="6" loc="(338,2591)" name="Text">
+      <a name="text" val="9"/>
+    </comp>
+    <comp lib="0" loc="(1390,1460)" name="Tunnel">
+      <a name="width" val="8"/>
+      <a name="label" val="BUS --&gt; A"/>
+    </comp>
+    <comp lib="1" loc="(1060,2430)" name="OR Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(860,1400)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="CLOCK"/>
+    </comp>
+    <comp lib="0" loc="(190,280)" name="Probe">
+      <a name="radix" val="10unsigned"/>
+    </comp>
+    <comp lib="0" loc="(1310,2230)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="8"/>
+      <a name="label" val="RAM --&gt; BUS"/>
+    </comp>
+    <comp lib="0" loc="(2130,670)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="SCREEN 4"/>
+    </comp>
+    <comp lib="0" loc="(880,1620)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="8"/>
+      <a name="label" val="B --&gt; BUS"/>
+    </comp>
+    <comp lib="0" loc="(380,280)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="8"/>
+      <a name="label" val="RAM ADDRESS"/>
+    </comp>
+    <comp lib="4" loc="(1850,1040)" name="Register">
+      <a name="trigger" val="high"/>
+    </comp>
+    <comp lib="0" loc="(880,510)" name="Tunnel">
+      <a name="width" val="8"/>
+      <a name="label" val="____"/>
+    </comp>
+    <comp lib="0" loc="(860,1680)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="CLOCK"/>
+    </comp>
+    <comp lib="0" loc="(2130,1270)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="SCREEN 14"/>
+    </comp>
+    <comp lib="4" loc="(1850,860)" name="Register">
+      <a name="trigger" val="high"/>
+    </comp>
+    <comp lib="0" loc="(2030,1050)" name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(890,1860)" name="Pull Resistor"/>
+    <comp lib="1" loc="(1400,1540)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="1" loc="(970,1950)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="1" loc="(1430,2330)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="0" loc="(880,1450)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="8"/>
+      <a name="label" val="ROM --&gt; BUS"/>
+    </comp>
+    <comp lib="4" loc="(2090,800)" name="Register">
+      <a name="trigger" val="high"/>
+    </comp>
+    <comp lib="0" loc="(2030,1290)" name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="2" loc="(230,3570)" name="Decoder">
+      <a name="select" val="4"/>
+    </comp>
+    <comp lib="1" loc="(1310,1400)" name="Buffer"/>
+    <comp lib="1" loc="(1080,2430)" name="Buffer">
+      <a name="out" val="Z1"/>
     </comp>
     <comp lib="1" loc="(930,1890)" name="Controlled Buffer">
       <a name="width" val="8"/>
       <a name="control" val="left"/>
     </comp>
-    <comp lib="0" loc="(200,500)" name="Tunnel">
-      <a name="width" val="8"/>
-      <a name="label" val="B --&gt; BUS"/>
-    </comp>
-    <comp lib="4" loc="(1370,1850)" name="D Flip-Flop"/>
-    <comp lib="1" loc="(210,830)" name="Buffer">
-      <a name="facing" val="west"/>
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="1" loc="(820,510)" name="Controlled Buffer">
-      <a name="facing" val="south"/>
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(270,2880)" name="Tunnel">
-      <a name="label" val="RAM --&gt; B"/>
-    </comp>
-    <comp lib="0" loc="(880,1890)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="8"/>
-      <a name="label" val="ROM --&gt; BUS"/>
-    </comp>
-    <comp lib="0" loc="(1320,2500)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="8"/>
-      <a name="label" val="ROM --&gt; BUS"/>
-    </comp>
-    <comp lib="0" loc="(410,420)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="16"/>
-      <a name="label" val="SCREEN 2"/>
-    </comp>
-    <comp lib="0" loc="(410,300)" name="Pull Resistor">
+    <comp lib="1" loc="(160,510)" name="Buffer">
       <a name="facing" val="north"/>
     </comp>
-    <comp lib="0" loc="(270,3230)" name="Tunnel">
-      <a name="label" val="ROM --&gt; RAM"/>
-    </comp>
-    <comp lib="0" loc="(1420,2230)" name="Tunnel">
-      <a name="width" val="8"/>
-      <a name="label" val="SCREEN SECTOR"/>
-    </comp>
-    <comp lib="1" loc="(1360,1600)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-      <a name="control" val="left"/>
-    </comp>
-    <comp lib="0" loc="(930,2610)" name="Tunnel">
-      <a name="label" val="LOAD A"/>
-    </comp>
-    <comp lib="0" loc="(1590,450)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="8"/>
-      <a name="label" val="SCREEN DATA"/>
-    </comp>
-    <comp lib="1" loc="(880,1970)" name="Buffer"/>
-    <comp lib="0" loc="(2130,790)" name="Tunnel">
-      <a name="width" val="16"/>
-      <a name="label" val="SCREEN 6"/>
-    </comp>
-    <comp lib="1" loc="(160,650)" name="Buffer">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="1" loc="(170,640)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(2120,1270)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="incoming" val="16"/>
-      <a name="bit1" val="0"/>
-      <a name="bit2" val="0"/>
-      <a name="bit3" val="0"/>
-      <a name="bit4" val="0"/>
-      <a name="bit5" val="0"/>
-      <a name="bit6" val="0"/>
-      <a name="bit7" val="0"/>
-      <a name="bit8" val="1"/>
-      <a name="bit9" val="1"/>
-      <a name="bit10" val="1"/>
-      <a name="bit11" val="1"/>
-      <a name="bit12" val="1"/>
-      <a name="bit13" val="1"/>
-      <a name="bit14" val="1"/>
-      <a name="bit15" val="1"/>
-    </comp>
-    <comp lib="1" loc="(270,3070)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="1" loc="(1310,1540)" name="Buffer"/>
-    <comp lib="2" loc="(230,1770)" name="Decoder">
-      <a name="select" val="4"/>
-    </comp>
-    <comp lib="0" loc="(970,1520)" name="Tunnel">
-      <a name="label" val="LOAD B"/>
-    </comp>
-    <comp lib="0" loc="(1420,2170)" name="Tunnel">
-      <a name="label" val="COMMAND"/>
-    </comp>
-    <comp lib="4" loc="(2090,1040)" name="Register">
+    <comp lib="4" loc="(120,640)" name="Register">
       <a name="trigger" val="high"/>
-    </comp>
-    <comp lib="4" loc="(2090,800)" name="Register">
-      <a name="trigger" val="high"/>
-    </comp>
-    <comp lib="0" loc="(270,2710)" name="Tunnel">
-      <a name="label" val="A --&gt; RAM"/>
-    </comp>
-    <comp lib="0" loc="(410,490)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="16"/>
-      <a name="label" val="SCREEN 9"/>
-    </comp>
-    <comp lib="6" loc="(343,3300)" name="Text">
-      <a name="text" val="d"/>
-    </comp>
-    <comp lib="1" loc="(930,2610)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="0" loc="(2030,1290)" name="Pull Resistor">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="0" loc="(860,1540)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="CLOCK"/>
-    </comp>
-    <comp lib="0" loc="(190,510)" name="Pull Resistor">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="0" loc="(810,2570)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="8"/>
-      <a name="label" val="A --&gt; BUS"/>
-    </comp>
-    <comp lib="4" loc="(1850,1040)" name="Register">
-      <a name="trigger" val="high"/>
-    </comp>
-    <comp lib="0" loc="(190,500)" name="Pull Resistor"/>
-    <comp lib="4" loc="(860,510)" name="Register"/>
-    <comp lib="0" loc="(1790,1110)" name="Pull Resistor">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="0" loc="(2120,850)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="incoming" val="16"/>
-      <a name="bit1" val="0"/>
-      <a name="bit2" val="0"/>
-      <a name="bit3" val="0"/>
-      <a name="bit4" val="0"/>
-      <a name="bit5" val="0"/>
-      <a name="bit6" val="0"/>
-      <a name="bit7" val="0"/>
-      <a name="bit8" val="1"/>
-      <a name="bit9" val="1"/>
-      <a name="bit10" val="1"/>
-      <a name="bit11" val="1"/>
-      <a name="bit12" val="1"/>
-      <a name="bit13" val="1"/>
-      <a name="bit14" val="1"/>
-      <a name="bit15" val="1"/>
-    </comp>
-    <comp lib="1" loc="(270,3060)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="1" loc="(1420,2030)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="4" loc="(940,1400)" name="D Flip-Flop"/>
-    <comp lib="1" loc="(270,1070)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="0" loc="(880,1480)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="8"/>
-      <a name="label" val="A --&gt; BUS"/>
-    </comp>
-    <comp lib="0" loc="(2030,1170)" name="Pull Resistor">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="4" loc="(2090,1220)" name="Register">
-      <a name="trigger" val="high"/>
-    </comp>
-    <comp lib="0" loc="(410,520)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="16"/>
-      <a name="label" val="SCREEN 12"/>
-    </comp>
-    <comp lib="1" loc="(1380,2200)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-      <a name="control" val="left"/>
-    </comp>
-    <comp lib="2" loc="(30,880)" name="Decoder">
-      <a name="facing" val="south"/>
-      <a name="select" val="4"/>
-    </comp>
-    <comp lib="0" loc="(410,540)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="16"/>
-      <a name="label" val="SCREEN 14"/>
-    </comp>
-    <comp lib="0" loc="(190,280)" name="Probe">
-      <a name="radix" val="10unsigned"/>
-    </comp>
-    <comp lib="0" loc="(190,1070)" name="Pull Resistor">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="0" loc="(1580,480)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="SCREEN SAVE"/>
-    </comp>
-    <comp lib="0" loc="(190,2870)" name="Pull Resistor">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="6" loc="(335,3136)" name="Text">
-      <a name="text" val="c"/>
-    </comp>
-    <comp lib="0" loc="(890,2070)" name="Pull Resistor"/>
-    <comp lib="1" loc="(1600,480)" name="Buffer"/>
-    <comp lib="0" loc="(2030,990)" name="Pull Resistor">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="1" loc="(270,2870)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="0" loc="(410,510)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="16"/>
-      <a name="label" val="SCREEN 11"/>
-    </comp>
-    <comp lib="0" loc="(1400,1680)" name="Tunnel">
-      <a name="label" val="SAVE C"/>
-    </comp>
-    <comp lib="0" loc="(880,2330)" name="Pull Resistor"/>
-    <comp lib="4" loc="(1850,1280)" name="Register">
-      <a name="trigger" val="high"/>
-    </comp>
-    <comp lib="0" loc="(1290,1680)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="RAM --&gt; C"/>
-    </comp>
-    <comp lib="0" loc="(410,710)" name="Probe">
-      <a name="radix" val="16"/>
-    </comp>
-    <comp lib="0" loc="(410,530)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="16"/>
-      <a name="label" val="SCREEN 13"/>
-    </comp>
-    <comp lib="1" loc="(880,2070)" name="Buffer"/>
-    <comp lib="0" loc="(190,3210)" name="Pull Resistor"/>
-    <comp lib="0" loc="(190,640)" name="Pull Resistor"/>
-    <comp lib="1" loc="(880,1860)" name="Buffer"/>
-    <comp lib="1" loc="(1040,2460)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="0" loc="(210,830)" name="Pull Resistor"/>
-    <comp lib="0" loc="(880,510)" name="Tunnel">
-      <a name="width" val="8"/>
-      <a name="label" val="____"/>
-    </comp>
-    <comp lib="0" loc="(860,2070)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="ROM --&gt; C"/>
-    </comp>
-    <comp lib="1" loc="(30,800)" name="NOT Gate">
-      <a name="facing" val="west"/>
-      <a name="size" val="20"/>
-    </comp>
-    <comp lib="0" loc="(850,2310)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="CLOCK"/>
-    </comp>
-    <comp lib="2" loc="(230,1070)" name="Decoder">
-      <a name="selloc" val="tr"/>
-      <a name="select" val="4"/>
-    </comp>
-    <comp lib="2" loc="(230,2850)" name="Decoder">
-      <a name="select" val="4"/>
-    </comp>
-    <comp lib="0" loc="(50,400)" name="Tunnel">
-      <a name="facing" val="north"/>
-      <a name="label" val="SAVE A"/>
-    </comp>
-    <comp lib="0" loc="(410,500)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="16"/>
-      <a name="label" val="SCREEN 10"/>
-    </comp>
-    <comp lib="0" loc="(190,2490)" name="Pull Resistor"/>
-    <comp lib="0" loc="(2030,870)" name="Pull Resistor">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="1" loc="(270,2710)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="0" loc="(450,330)" name="Pull Resistor">
-      <a name="facing" val="west"/>
     </comp>
     <comp lib="0" loc="(1320,1680)" name="Pull Resistor"/>
-    <comp lib="0" loc="(190,2130)" name="Pull Resistor"/>
-    <comp lib="0" loc="(1400,1540)" name="Tunnel">
-      <a name="label" val="SAVE B"/>
-    </comp>
-    <comp lib="0" loc="(1570,410)" name="Pull Resistor"/>
-    <comp lib="4" loc="(1400,2330)" name="D Flip-Flop"/>
-    <comp lib="0" loc="(1320,1870)" name="Pull Resistor"/>
-    <comp lib="1" loc="(200,280)" name="Buffer">
-      <a name="facing" val="west"/>
+    <comp lib="1" loc="(600,690)" name="Buffer">
       <a name="width" val="8"/>
-    </comp>
-    <comp lib="1" loc="(270,3050)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="4" loc="(1850,560)" name="Register">
-      <a name="trigger" val="high"/>
-    </comp>
-    <comp lib="0" loc="(80,350)" name="Pull Resistor"/>
-    <comp lib="1" loc="(930,2100)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-      <a name="control" val="left"/>
-    </comp>
-    <comp lib="0" loc="(2120,490)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="incoming" val="16"/>
-      <a name="bit1" val="0"/>
-      <a name="bit2" val="0"/>
-      <a name="bit3" val="0"/>
-      <a name="bit4" val="0"/>
-      <a name="bit5" val="0"/>
-      <a name="bit6" val="0"/>
-      <a name="bit7" val="0"/>
-      <a name="bit8" val="1"/>
-      <a name="bit9" val="1"/>
-      <a name="bit10" val="1"/>
-      <a name="bit11" val="1"/>
-      <a name="bit12" val="1"/>
-      <a name="bit13" val="1"/>
-      <a name="bit14" val="1"/>
-      <a name="bit15" val="1"/>
-    </comp>
-    <comp lib="0" loc="(890,1970)" name="Pull Resistor"/>
-    <comp lib="0" loc="(200,640)" name="Tunnel">
-      <a name="width" val="8"/>
-      <a name="label" val="C --&gt; BUS"/>
-    </comp>
-    <comp lib="6" loc="(330,1140)" name="Text">
-      <a name="text" val="1"/>
-    </comp>
-    <comp lib="0" loc="(1320,2400)" name="Pull Resistor"/>
-    <comp lib="0" loc="(970,2070)" name="Tunnel">
-      <a name="label" val="COMMAND"/>
-    </comp>
-    <comp lib="0" loc="(410,670)" name="Probe"/>
-    <comp lib="0" loc="(1400,1400)" name="Tunnel">
-      <a name="label" val="SAVE A"/>
-    </comp>
-    <comp lib="1" loc="(160,360)" name="Buffer">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="1" loc="(930,1590)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-      <a name="control" val="left"/>
-    </comp>
-    <comp lib="1" loc="(1420,2400)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-      <a name="control" val="left"/>
-    </comp>
-    <comp lib="0" loc="(860,1840)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="CLOCK"/>
-    </comp>
-    <comp lib="4" loc="(1850,800)" name="Register">
-      <a name="trigger" val="high"/>
-    </comp>
-    <comp lib="0" loc="(1600,480)" name="Pull Resistor">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="0" loc="(70,800)" name="Pull Resistor"/>
-    <comp lib="0" loc="(2030,510)" name="Pull Resistor">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="1" loc="(1310,1400)" name="Buffer"/>
-    <comp lib="0" loc="(970,1660)" name="Tunnel">
-      <a name="label" val="LOAD C"/>
-    </comp>
-    <comp lib="0" loc="(1310,2090)" name="Pull Resistor"/>
-    <comp lib="4" loc="(2090,1100)" name="Register">
-      <a name="trigger" val="high"/>
-    </comp>
-    <comp lib="1" loc="(870,2330)" name="Buffer"/>
-    <comp lib="0" loc="(950,2100)" name="Tunnel">
-      <a name="width" val="8"/>
-      <a name="label" val="BUS --&gt; C"/>
-    </comp>
-    <comp lib="0" loc="(1400,1850)" name="Tunnel">
-      <a name="label" val="SAVE CYCLE"/>
-    </comp>
-    <comp lib="4" loc="(1380,2090)" name="Register">
-      <a name="trigger" val="high"/>
-    </comp>
-    <comp lib="1" loc="(930,1730)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-      <a name="control" val="left"/>
-    </comp>
-    <comp lib="1" loc="(970,1520)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="1" loc="(270,1080)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="1" loc="(1400,1660)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="4" loc="(1850,920)" name="Register">
-      <a name="trigger" val="high"/>
-    </comp>
-    <comp lib="2" loc="(230,2150)" name="Decoder">
-      <a name="selloc" val="tr"/>
-      <a name="select" val="4"/>
-    </comp>
-    <comp lib="3" loc="(860,450)" name="Adder"/>
-    <comp lib="0" loc="(190,650)" name="Pull Resistor">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="1" loc="(970,1860)" name="Buffer">
       <a name="out" val="Z1"/>
     </comp>
     <comp lib="0" loc="(1320,2330)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="CLOCK"/>
     </comp>
-    <comp lib="2" loc="(230,2870)" name="Decoder">
+    <comp lib="0" loc="(870,2260)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="8"/>
+      <a name="label" val="B --&gt; BUS"/>
+    </comp>
+    <comp lib="0" loc="(2130,910)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="SCREEN 8"/>
+    </comp>
+    <comp lib="0" loc="(50,690)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="SAVE C"/>
+    </comp>
+    <comp lib="1" loc="(1430,2450)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="4" loc="(2090,1340)" name="Register">
+      <a name="trigger" val="high"/>
+    </comp>
+    <comp lib="0" loc="(960,1590)" name="Tunnel">
+      <a name="width" val="8"/>
+      <a name="label" val="RAM ADDRESS"/>
+    </comp>
+    <comp lib="0" loc="(1390,1740)" name="Tunnel">
+      <a name="width" val="8"/>
+      <a name="label" val="BUS --&gt; C"/>
+    </comp>
+    <comp lib="6" loc="(332,2399)" name="Text">
+      <a name="text" val="8"/>
+    </comp>
+    <comp lib="2" loc="(230,3210)" name="Decoder">
+      <a name="select" val="4"/>
+    </comp>
+    <comp lib="0" loc="(1790,750)" name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="1" loc="(270,2710)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="0" loc="(190,1070)" name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="4" loc="(120,350)" name="Register">
+      <a name="trigger" val="high"/>
+    </comp>
+    <comp lib="6" loc="(356,1511)" name="Text">
+      <a name="text" val="3"/>
+    </comp>
+    <comp lib="1" loc="(70,680)" name="Buffer"/>
+    <comp lib="0" loc="(1080,2430)" name="Tunnel">
+      <a name="label" val="COMMAND"/>
+    </comp>
+    <comp lib="2" loc="(230,2150)" name="Decoder">
       <a name="selloc" val="tr"/>
       <a name="select" val="4"/>
     </comp>
-    <comp lib="0" loc="(1310,1570)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="8"/>
-      <a name="label" val="ROM --&gt; BUS"/>
-    </comp>
-    <comp lib="0" loc="(190,2850)" name="Pull Resistor"/>
-    <comp lib="2" loc="(1870,430)" name="Decoder">
-      <a name="facing" val="south"/>
-      <a name="select" val="4"/>
-    </comp>
-    <comp lib="1" loc="(880,1560)" name="Buffer"/>
-    <comp lib="0" loc="(210,830)" name="Splitter">
-      <a name="facing" val="south"/>
-      <a name="incoming" val="8"/>
-      <a name="appear" val="right"/>
-      <a name="bit1" val="0"/>
-      <a name="bit2" val="0"/>
-      <a name="bit3" val="0"/>
-      <a name="bit4" val="1"/>
-      <a name="bit5" val="1"/>
-      <a name="bit6" val="1"/>
-      <a name="bit7" val="1"/>
-    </comp>
-    <comp lib="1" loc="(270,2690)" name="Buffer">
+    <comp lib="1" loc="(960,2330)" name="Buffer">
       <a name="out" val="Z1"/>
     </comp>
     <comp lib="0" loc="(2120,1330)" name="Splitter">
@@ -2506,219 +1116,16 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="bit14" val="1"/>
       <a name="bit15" val="1"/>
     </comp>
-    <comp lib="1" loc="(1430,2330)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="0" loc="(270,3270)" name="Tunnel">
-      <a name="label" val="A --&gt; PROVE"/>
-    </comp>
-    <comp lib="1" loc="(1060,2430)" name="OR Gate">
-      <a name="size" val="30"/>
-      <a name="inputs" val="2"/>
-    </comp>
-    <comp lib="0" loc="(2120,1210)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="incoming" val="16"/>
-      <a name="bit1" val="0"/>
-      <a name="bit2" val="0"/>
-      <a name="bit3" val="0"/>
-      <a name="bit4" val="0"/>
-      <a name="bit5" val="0"/>
-      <a name="bit6" val="0"/>
-      <a name="bit7" val="0"/>
-      <a name="bit8" val="1"/>
-      <a name="bit9" val="1"/>
-      <a name="bit10" val="1"/>
-      <a name="bit11" val="1"/>
-      <a name="bit12" val="1"/>
-      <a name="bit13" val="1"/>
-      <a name="bit14" val="1"/>
-      <a name="bit15" val="1"/>
-    </comp>
-    <comp lib="1" loc="(880,1420)" name="Buffer"/>
-    <comp lib="4" loc="(1850,1160)" name="Register">
-      <a name="trigger" val="high"/>
-    </comp>
-    <comp lib="1" loc="(970,1660)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="2" loc="(230,2130)" name="Decoder">
-      <a name="select" val="4"/>
-    </comp>
-    <comp lib="0" loc="(890,1420)" name="Pull Resistor"/>
-    <comp lib="0" loc="(1400,1500)" name="Tunnel">
-      <a name="label" val="LOAD RAM"/>
-    </comp>
-    <comp lib="0" loc="(190,2150)" name="Pull Resistor">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="0" loc="(860,2050)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="CLOCK"/>
-    </comp>
-    <comp lib="0" loc="(860,1860)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="ROM --&gt; A"/>
-    </comp>
-    <comp lib="0" loc="(970,1380)" name="Tunnel">
-      <a name="label" val="LOAD A"/>
-    </comp>
-    <comp lib="4" loc="(1850,860)" name="Register">
-      <a name="trigger" val="high"/>
-    </comp>
-    <comp lib="1" loc="(1410,2090)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-      <a name="control" val="left"/>
-    </comp>
-    <comp lib="0" loc="(1420,2060)" name="Tunnel">
-      <a name="width" val="8"/>
-      <a name="label" val="RAM ADDRESS"/>
-    </comp>
-    <comp lib="1" loc="(1310,1870)" name="Buffer"/>
-    <comp lib="2" loc="(230,3590)" name="Decoder">
-      <a name="selloc" val="tr"/>
-      <a name="select" val="4"/>
-    </comp>
-    <comp lib="0" loc="(410,480)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="16"/>
-      <a name="label" val="SCREEN 8"/>
-    </comp>
-    <comp lib="0" loc="(2120,970)" name="Splitter">
-      <a name="facing" val="west"/>
-      <a name="incoming" val="16"/>
-      <a name="bit1" val="0"/>
-      <a name="bit2" val="0"/>
-      <a name="bit3" val="0"/>
-      <a name="bit4" val="0"/>
-      <a name="bit5" val="0"/>
-      <a name="bit6" val="0"/>
-      <a name="bit7" val="0"/>
-      <a name="bit8" val="1"/>
-      <a name="bit9" val="1"/>
-      <a name="bit10" val="1"/>
-      <a name="bit11" val="1"/>
-      <a name="bit12" val="1"/>
-      <a name="bit13" val="1"/>
-      <a name="bit14" val="1"/>
-      <a name="bit15" val="1"/>
-    </comp>
-    <comp lib="0" loc="(2130,730)" name="Tunnel">
-      <a name="width" val="16"/>
-      <a name="label" val="SCREEN 5"/>
-    </comp>
-    <comp lib="1" loc="(70,640)" name="Buffer">
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="4" loc="(2090,740)" name="Register">
-      <a name="trigger" val="high"/>
-    </comp>
-    <comp lib="0" loc="(2030,810)" name="Pull Resistor">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="6" loc="(359,1334)" name="Text">
-      <a name="text" val="2"/>
-    </comp>
-    <comp lib="0" loc="(1310,2230)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="8"/>
-      <a name="label" val="RAM --&gt; BUS"/>
-    </comp>
-    <comp lib="0" loc="(370,690)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="width" val="8"/>
-      <a name="label" val="____"/>
-    </comp>
-    <comp lib="1" loc="(930,2000)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-      <a name="control" val="left"/>
-    </comp>
-    <comp lib="0" loc="(200,350)" name="Tunnel">
-      <a name="width" val="8"/>
-      <a name="label" val="A --&gt; BUS"/>
-    </comp>
-    <comp lib="1" loc="(930,1480)" name="Controlled Buffer">
-      <a name="width" val="8"/>
-      <a name="control" val="left"/>
-    </comp>
-    <comp lib="0" loc="(850,2330)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="JUMPIF="/>
-    </comp>
-    <comp lib="0" loc="(1310,2200)" name="Tunnel">
+    <comp lib="0" loc="(880,1590)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="width" val="8"/>
       <a name="label" val="ROM --&gt; BUS"/>
     </comp>
-    <comp lib="4" loc="(570,690)" name="ROM">
-      <a name="contents">addr/data: 8 8
-a0 0 b0 2 40 10
-</a>
-    </comp>
-    <comp lib="1" loc="(70,800)" name="Buffer">
-      <a name="facing" val="west"/>
-    </comp>
-    <comp lib="1" loc="(160,510)" name="Buffer">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="1" loc="(970,1540)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="1" loc="(600,690)" name="Buffer">
-      <a name="width" val="8"/>
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="0" loc="(1790,690)" name="Pull Resistor">
-      <a name="facing" val="north"/>
-    </comp>
-    <comp lib="0" loc="(410,440)" name="Tunnel">
+    <comp lib="0" loc="(1580,480)" name="Tunnel">
       <a name="facing" val="east"/>
-      <a name="width" val="16"/>
-      <a name="label" val="SCREEN 4"/>
+      <a name="label" val="SCREEN SAVE"/>
     </comp>
-    <comp lib="4" loc="(1850,1100)" name="Register">
-      <a name="trigger" val="high"/>
-    </comp>
-    <comp lib="0" loc="(970,1560)" name="Tunnel">
-      <a name="label" val="SAVE RAM"/>
-    </comp>
-    <comp lib="0" loc="(1290,1850)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="CLOCK"/>
-    </comp>
-    <comp lib="0" loc="(970,1400)" name="Tunnel">
-      <a name="label" val="COMMAND"/>
-    </comp>
-    <comp lib="0" loc="(1290,1380)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="CLOCK"/>
-    </comp>
-    <comp lib="0" loc="(960,1620)" name="Tunnel">
-      <a name="width" val="8"/>
-      <a name="label" val="RAM DATA"/>
-    </comp>
-    <comp lib="0" loc="(580,280)" name="Tunnel">
-      <a name="width" val="8"/>
-      <a name="label" val="RAM --&gt; BUS"/>
-    </comp>
-    <comp lib="0" loc="(1290,1520)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="CLOCK"/>
-    </comp>
-    <comp lib="4" loc="(2090,560)" name="Register">
-      <a name="trigger" val="high"/>
-    </comp>
-    <comp lib="0" loc="(860,1420)" name="Tunnel">
-      <a name="facing" val="east"/>
-      <a name="label" val="A --&gt; RAM"/>
-    </comp>
-    <comp lib="4" loc="(2090,1280)" name="Register">
-      <a name="trigger" val="high"/>
-    </comp>
-    <comp lib="1" loc="(1560,410)" name="Buffer">
-      <a name="width" val="8"/>
-    </comp>
-    <comp lib="0" loc="(2120,610)" name="Splitter">
+    <comp lib="0" loc="(2120,850)" name="Splitter">
       <a name="facing" val="west"/>
       <a name="incoming" val="16"/>
       <a name="bit1" val="0"/>
@@ -2737,31 +1144,161 @@ a0 0 b0 2 40 10
       <a name="bit14" val="1"/>
       <a name="bit15" val="1"/>
     </comp>
-    <comp lib="0" loc="(1790,570)" name="Pull Resistor">
+    <comp lib="1" loc="(1420,2150)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="1" loc="(510,340)" name="Buffer">
       <a name="facing" val="north"/>
     </comp>
-    <comp lib="0" loc="(960,2160)" name="Tunnel">
-      <a name="label" val="LOAD A"/>
+    <comp lib="0" loc="(410,540)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="SCREEN 14"/>
+    </comp>
+    <comp lib="4" loc="(1370,1850)" name="D Flip-Flop"/>
+    <comp lib="4" loc="(1850,800)" name="Register">
+      <a name="trigger" val="high"/>
+    </comp>
+    <comp lib="0" loc="(1790,630)" name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="1" loc="(880,1420)" name="Buffer"/>
+    <comp lib="4" loc="(940,1680)" name="D Flip-Flop"/>
+    <comp lib="1" loc="(450,620)" name="AND Gate">
+      <a name="size" val="30"/>
+      <a name="inputs" val="2"/>
+    </comp>
+    <comp lib="0" loc="(2130,550)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="SCREEN 2"/>
+    </comp>
+    <comp lib="0" loc="(450,330)" name="Pull Resistor">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="0" loc="(270,3050)" name="Tunnel">
+      <a name="label" val="ROM --&gt; C"/>
+    </comp>
+    <comp lib="1" loc="(1310,1870)" name="Buffer"/>
+    <comp lib="0" loc="(1290,1540)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="RAM --&gt; B"/>
+    </comp>
+    <comp lib="0" loc="(410,490)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="SCREEN 9"/>
+    </comp>
+    <comp lib="0" loc="(1420,2030)" name="Tunnel">
+      <a name="label" val="LOAD RAM"/>
+    </comp>
+    <comp lib="2" loc="(230,1790)" name="Decoder">
+      <a name="selloc" val="tr"/>
+      <a name="select" val="4"/>
+    </comp>
+    <comp lib="0" loc="(1680,390)" name="Pull Resistor"/>
+    <comp lib="1" loc="(1420,2030)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="0" loc="(1010,2460)" name="Pull Resistor">
+      <a name="facing" val="east"/>
+    </comp>
+    <comp lib="2" loc="(230,2850)" name="Decoder">
+      <a name="select" val="4"/>
+    </comp>
+    <comp lib="1" loc="(70,390)" name="Buffer"/>
+    <comp lib="4" loc="(1400,2450)" name="D Flip-Flop"/>
+    <comp lib="4" loc="(2090,500)" name="Register">
+      <a name="trigger" val="high"/>
+    </comp>
+    <comp lib="0" loc="(2030,1110)" name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(1790,1110)" name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="4" loc="(1390,2010)" name="D Flip-Flop"/>
+    <comp lib="6" loc="(325,2940)" name="Text">
+      <a name="text" val="b"/>
+    </comp>
+    <comp lib="1" loc="(1420,2130)" name="Buffer">
+      <a name="out" val="Z1"/>
     </comp>
     <comp lib="0" loc="(1430,2400)" name="Tunnel">
       <a name="width" val="8"/>
       <a name="label" val="RAM ADDRESS"/>
     </comp>
-    <comp lib="6" loc="(1203,658)" name="Text"/>
-    <comp lib="0" loc="(1310,1430)" name="Tunnel">
+    <comp lib="0" loc="(2030,690)" name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="1" loc="(70,800)" name="Buffer">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="1" loc="(1610,450)" name="Buffer">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(760,450)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="SAVE CYCLE"/>
+    </comp>
+    <comp lib="3" loc="(1000,2430)" name="Comparator"/>
+    <comp lib="0" loc="(410,510)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="SCREEN 11"/>
+    </comp>
+    <comp lib="4" loc="(1850,1160)" name="Register">
+      <a name="trigger" val="high"/>
+    </comp>
+    <comp lib="0" loc="(1290,1520)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="CLOCK"/>
+    </comp>
+    <comp lib="1" loc="(970,1970)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="4" loc="(940,2050)" name="D Flip-Flop"/>
+    <comp lib="6" loc="(358,3486)" name="Text">
+      <a name="text" val="e"/>
+    </comp>
+    <comp lib="1" loc="(270,2870)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="0" loc="(960,1730)" name="Tunnel">
+      <a name="width" val="8"/>
+      <a name="label" val="RAM ADDRESS"/>
+    </comp>
+    <comp lib="0" loc="(1390,1570)" name="Tunnel">
+      <a name="width" val="8"/>
+      <a name="label" val="RAM ADDRESS"/>
+    </comp>
+    <comp lib="0" loc="(1600,480)" name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(270,2890)" name="Tunnel">
+      <a name="label" val="B --&gt; RAM"/>
+    </comp>
+    <comp lib="0" loc="(1320,2500)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="width" val="8"/>
       <a name="label" val="ROM --&gt; BUS"/>
     </comp>
-    <comp lib="1" loc="(1390,2500)" name="Controlled Buffer">
+    <comp lib="1" loc="(970,1680)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="6" loc="(330,1140)" name="Text">
+      <a name="text" val="1"/>
+    </comp>
+    <comp lib="1" loc="(820,510)" name="Controlled Buffer">
+      <a name="facing" val="south"/>
       <a name="width" val="8"/>
-      <a name="control" val="left"/>
     </comp>
-    <comp lib="4" loc="(2090,680)" name="Register">
-      <a name="trigger" val="high"/>
+    <comp lib="0" loc="(850,2330)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="JUMPIF="/>
     </comp>
-    <comp lib="6" loc="(331,2029)" name="Text">
-      <a name="text" val="6"/>
+    <comp lib="1" loc="(880,1970)" name="Buffer"/>
+    <comp lib="1" loc="(70,500)" name="Buffer">
+      <a name="width" val="8"/>
     </comp>
     <comp lib="0" loc="(2120,550)" name="Splitter">
       <a name="facing" val="west"/>
@@ -2782,32 +1319,38 @@ a0 0 b0 2 40 10
       <a name="bit14" val="1"/>
       <a name="bit15" val="1"/>
     </comp>
-    <comp lib="1" loc="(970,1400)" name="Buffer">
-      <a name="out" val="Z1"/>
+    <comp lib="0" loc="(860,2070)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="ROM --&gt; C"/>
     </comp>
     <comp lib="0" loc="(190,3230)" name="Pull Resistor">
       <a name="facing" val="north"/>
     </comp>
-    <comp lib="1" loc="(1310,2400)" name="Buffer">
+    <comp lib="4" loc="(120,500)" name="Register">
+      <a name="trigger" val="high"/>
+    </comp>
+    <comp lib="0" loc="(2130,1210)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="SCREEN 13"/>
+    </comp>
+    <comp lib="4" loc="(2090,1280)" name="Register">
+      <a name="trigger" val="high"/>
+    </comp>
+    <comp lib="0" loc="(880,1760)" name="Tunnel">
+      <a name="facing" val="east"/>
       <a name="width" val="8"/>
+      <a name="label" val="C --&gt; BUS"/>
     </comp>
-    <comp lib="1" loc="(970,1970)" name="Buffer">
-      <a name="out" val="Z1"/>
+    <comp lib="4" loc="(1370,1380)" name="D Flip-Flop"/>
+    <comp lib="0" loc="(410,710)" name="Probe">
+      <a name="radix" val="16"/>
     </comp>
-    <comp lib="2" loc="(230,3210)" name="Decoder">
+    <comp lib="2" loc="(1870,430)" name="Decoder">
+      <a name="facing" val="south"/>
       <a name="select" val="4"/>
     </comp>
-    <comp lib="1" loc="(1080,2430)" name="Buffer">
-      <a name="out" val="Z1"/>
-    </comp>
-    <comp lib="0" loc="(270,3070)" name="Tunnel">
-      <a name="label" val="C --&gt; RAM"/>
-    </comp>
-    <comp lib="0" loc="(2030,930)" name="Pull Resistor">
+    <comp lib="0" loc="(190,360)" name="Pull Resistor">
       <a name="facing" val="north"/>
-    </comp>
-    <comp lib="1" loc="(970,1380)" name="Buffer">
-      <a name="out" val="Z1"/>
     </comp>
     <comp lib="0" loc="(2120,1090)" name="Splitter">
       <a name="facing" val="west"/>
@@ -2828,8 +1371,1469 @@ a0 0 b0 2 40 10
       <a name="bit14" val="1"/>
       <a name="bit15" val="1"/>
     </comp>
+    <comp lib="0" loc="(970,1950)" name="Tunnel">
+      <a name="label" val="SAVE B"/>
+    </comp>
+    <comp lib="0" loc="(970,1420)" name="Tunnel">
+      <a name="label" val="SAVE RAM"/>
+    </comp>
+    <comp lib="0" loc="(840,540)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="CLOCK"/>
+    </comp>
+    <comp lib="0" loc="(190,2850)" name="Pull Resistor"/>
+    <comp lib="1" loc="(970,1840)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="0" loc="(1430,2500)" name="Tunnel">
+      <a name="width" val="8"/>
+      <a name="label" val="RAM DATA"/>
+    </comp>
+    <comp lib="4" loc="(1850,1100)" name="Register">
+      <a name="trigger" val="high"/>
+    </comp>
+    <comp lib="0" loc="(1340,2030)" name="Pull Resistor"/>
+    <comp lib="0" loc="(410,280)" name="Pull Resistor"/>
+    <comp lib="1" loc="(1380,2230)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+      <a name="control" val="left"/>
+    </comp>
+    <comp lib="0" loc="(1390,1710)" name="Tunnel">
+      <a name="width" val="8"/>
+      <a name="label" val="RAM ADDRESS"/>
+    </comp>
+    <comp lib="0" loc="(1420,2130)" name="Tunnel">
+      <a name="label" val="LOAD RAM"/>
+    </comp>
+    <comp lib="0" loc="(850,2610)" name="Pull Resistor"/>
+    <comp lib="0" loc="(2030,1230)" name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(1420,2090)" name="Tunnel">
+      <a name="width" val="8"/>
+      <a name="label" val="SCREEN DATA"/>
+    </comp>
+    <comp lib="6" loc="(337,2209)" name="Text">
+      <a name="text" val="7"/>
+    </comp>
+    <comp lib="0" loc="(2130,730)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="SCREEN 5"/>
+    </comp>
+    <comp lib="1" loc="(1400,1870)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="0" loc="(950,1890)" name="Tunnel">
+      <a name="width" val="8"/>
+      <a name="label" val="BUS --&gt; A"/>
+    </comp>
+    <comp lib="1" loc="(970,1700)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="0" loc="(1400,1850)" name="Tunnel">
+      <a name="label" val="SAVE CYCLE"/>
+    </comp>
+    <comp lib="1" loc="(1420,2170)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="1" loc="(1310,1680)" name="Buffer"/>
+    <comp lib="0" loc="(2120,1150)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="incoming" val="16"/>
+      <a name="bit1" val="0"/>
+      <a name="bit2" val="0"/>
+      <a name="bit3" val="0"/>
+      <a name="bit4" val="0"/>
+      <a name="bit5" val="0"/>
+      <a name="bit6" val="0"/>
+      <a name="bit7" val="0"/>
+      <a name="bit8" val="1"/>
+      <a name="bit9" val="1"/>
+      <a name="bit10" val="1"/>
+      <a name="bit11" val="1"/>
+      <a name="bit12" val="1"/>
+      <a name="bit13" val="1"/>
+      <a name="bit14" val="1"/>
+      <a name="bit15" val="1"/>
+    </comp>
+    <comp lib="4" loc="(2090,1400)" name="Register">
+      <a name="trigger" val="high"/>
+    </comp>
+    <comp lib="0" loc="(80,350)" name="Pull Resistor"/>
+    <comp lib="0" loc="(2130,790)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="SCREEN 6"/>
+    </comp>
+    <comp lib="0" loc="(270,2710)" name="Tunnel">
+      <a name="label" val="A --&gt; RAM"/>
+    </comp>
+    <comp lib="0" loc="(50,400)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="SAVE A"/>
+    </comp>
+    <comp lib="0" loc="(2130,1390)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="SCREEN 16"/>
+    </comp>
+    <comp lib="4" loc="(2090,1160)" name="Register">
+      <a name="trigger" val="high"/>
+    </comp>
+    <comp lib="1" loc="(1400,1640)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="0" loc="(1290,1400)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="RAM --&gt; A"/>
+    </comp>
+    <comp lib="1" loc="(270,3070)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="0" loc="(860,1970)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="ROM --&gt; B"/>
+    </comp>
+    <comp lib="1" loc="(970,1540)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="0" loc="(510,330)" name="Pull Resistor">
+      <a name="facing" val="east"/>
+    </comp>
+    <comp lib="4" loc="(1850,620)" name="Register">
+      <a name="trigger" val="high"/>
+    </comp>
+    <comp lib="0" loc="(1310,1430)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="8"/>
+      <a name="label" val="ROM --&gt; BUS"/>
+    </comp>
+    <comp lib="0" loc="(2120,1390)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="incoming" val="16"/>
+      <a name="bit1" val="0"/>
+      <a name="bit2" val="0"/>
+      <a name="bit3" val="0"/>
+      <a name="bit4" val="0"/>
+      <a name="bit5" val="0"/>
+      <a name="bit6" val="0"/>
+      <a name="bit7" val="0"/>
+      <a name="bit8" val="1"/>
+      <a name="bit9" val="1"/>
+      <a name="bit10" val="1"/>
+      <a name="bit11" val="1"/>
+      <a name="bit12" val="1"/>
+      <a name="bit13" val="1"/>
+      <a name="bit14" val="1"/>
+      <a name="bit15" val="1"/>
+    </comp>
+    <comp lib="0" loc="(2120,910)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="incoming" val="16"/>
+      <a name="bit1" val="0"/>
+      <a name="bit2" val="0"/>
+      <a name="bit3" val="0"/>
+      <a name="bit4" val="0"/>
+      <a name="bit5" val="0"/>
+      <a name="bit6" val="0"/>
+      <a name="bit7" val="0"/>
+      <a name="bit8" val="1"/>
+      <a name="bit9" val="1"/>
+      <a name="bit10" val="1"/>
+      <a name="bit11" val="1"/>
+      <a name="bit12" val="1"/>
+      <a name="bit13" val="1"/>
+      <a name="bit14" val="1"/>
+      <a name="bit15" val="1"/>
+    </comp>
+    <comp lib="0" loc="(200,640)" name="Tunnel">
+      <a name="width" val="8"/>
+      <a name="label" val="C --&gt; BUS"/>
+    </comp>
+    <comp lib="1" loc="(270,2880)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="1" loc="(880,2070)" name="Buffer"/>
+    <comp lib="2" loc="(230,1410)" name="Decoder">
+      <a name="select" val="4"/>
+    </comp>
+    <comp lib="0" loc="(570,620)" name="Probe">
+      <a name="radix" val="16"/>
+    </comp>
+    <comp lib="1" loc="(960,2350)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="0" loc="(1320,1400)" name="Pull Resistor"/>
+    <comp lib="0" loc="(1790,810)" name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="4" loc="(2090,1100)" name="Register">
+      <a name="trigger" val="high"/>
+    </comp>
+    <comp lib="1" loc="(970,1520)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="1" loc="(1390,2500)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+      <a name="control" val="left"/>
+    </comp>
+    <comp lib="0" loc="(860,1700)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="C --&gt; RAM"/>
+    </comp>
+    <comp lib="0" loc="(70,800)" name="Pull Resistor"/>
+    <comp lib="0" loc="(970,1660)" name="Tunnel">
+      <a name="label" val="LOAD C"/>
+    </comp>
+    <comp lib="0" loc="(1400,1660)" name="Tunnel">
+      <a name="label" val="COMMAND"/>
+    </comp>
+    <comp lib="1" loc="(920,2390)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+      <a name="control" val="left"/>
+    </comp>
+    <comp lib="0" loc="(50,550)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="SAVE B"/>
+    </comp>
+    <comp lib="0" loc="(1400,1500)" name="Tunnel">
+      <a name="label" val="LOAD RAM"/>
+    </comp>
+    <comp lib="0" loc="(960,1450)" name="Tunnel">
+      <a name="width" val="8"/>
+      <a name="label" val="RAM ADDRESS"/>
+    </comp>
+    <comp lib="0" loc="(200,500)" name="Tunnel">
+      <a name="width" val="8"/>
+      <a name="label" val="B --&gt; BUS"/>
+    </comp>
+    <comp lib="0" loc="(230,830)" name="Tunnel">
+      <a name="width" val="8"/>
+      <a name="label" val="ROM --&gt; BUS"/>
+    </comp>
+    <comp lib="1" loc="(970,2070)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="0" loc="(1310,1570)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="8"/>
+      <a name="label" val="ROM --&gt; BUS"/>
+    </comp>
+    <comp lib="1" loc="(900,2180)" name="Buffer"/>
+    <comp lib="0" loc="(1570,410)" name="Pull Resistor"/>
+    <comp lib="2" loc="(230,1430)" name="Decoder">
+      <a name="selloc" val="tr"/>
+      <a name="select" val="4"/>
+    </comp>
+    <comp lib="0" loc="(190,1770)" name="Pull Resistor"/>
+    <comp lib="1" loc="(1360,1740)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+      <a name="control" val="left"/>
+    </comp>
+    <comp lib="0" loc="(410,440)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="SCREEN 4"/>
+    </comp>
+    <comp lib="1" loc="(1360,1900)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+      <a name="control" val="left"/>
+    </comp>
+    <comp lib="4" loc="(1370,1660)" name="D Flip-Flop"/>
+    <comp lib="1" loc="(1420,2010)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="1" loc="(1380,2200)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+      <a name="control" val="left"/>
+    </comp>
+    <comp lib="1" loc="(1410,2090)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+      <a name="control" val="left"/>
+    </comp>
+    <comp lib="0" loc="(870,2240)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="8"/>
+      <a name="label" val="A --&gt; BUS"/>
+    </comp>
+    <comp lib="0" loc="(50,650)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="width" val="8"/>
+      <a name="label" val="BUS --&gt; C"/>
+    </comp>
+    <comp lib="1" loc="(1400,1680)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="1" loc="(70,640)" name="Buffer">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="4" loc="(1850,1220)" name="Register">
+      <a name="trigger" val="high"/>
+    </comp>
+    <comp lib="0" loc="(1630,370)" name="Pull Resistor"/>
+    <comp lib="1" loc="(960,2310)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="0" loc="(930,2570)" name="Tunnel">
+      <a name="width" val="8"/>
+      <a name="label" val="PROVE"/>
+    </comp>
+    <comp lib="1" loc="(930,1450)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+      <a name="control" val="left"/>
+    </comp>
+    <comp lib="0" loc="(410,560)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="SCREEN 16"/>
+    </comp>
+    <comp lib="0" loc="(1320,2350)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="ROM --&gt; RAM"/>
+    </comp>
+    <comp lib="0" loc="(190,1050)" name="Pull Resistor"/>
+    <comp lib="1" loc="(1360,1570)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+      <a name="control" val="left"/>
+    </comp>
+    <comp lib="1" loc="(1340,2350)" name="Buffer"/>
+    <comp lib="0" loc="(160,380)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="LOAD A"/>
+    </comp>
+    <comp lib="0" loc="(100,680)" name="Pull Resistor">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="0" loc="(810,510)" name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(190,2490)" name="Pull Resistor"/>
+    <comp lib="0" loc="(1350,2350)" name="Pull Resistor"/>
+    <comp lib="1" loc="(970,1420)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="4" loc="(2090,740)" name="Register">
+      <a name="trigger" val="high"/>
+    </comp>
+    <comp lib="1" loc="(1310,2400)" name="Buffer">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(1790,990)" name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(1310,2030)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="RAM --&gt; DISPLAY"/>
+    </comp>
+    <comp lib="0" loc="(1320,1870)" name="Pull Resistor"/>
+    <comp lib="0" loc="(270,3070)" name="Tunnel">
+      <a name="label" val="C --&gt; RAM"/>
+    </comp>
+    <comp lib="0" loc="(1430,2330)" name="Tunnel">
+      <a name="label" val="COMMAND"/>
+    </comp>
+    <comp lib="1" loc="(1400,1500)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="0" loc="(950,2100)" name="Tunnel">
+      <a name="width" val="8"/>
+      <a name="label" val="BUS --&gt; C"/>
+    </comp>
+    <comp lib="6" loc="(1634,38)" name="Text">
+      <a name="text" val="SCRATCH PC ________________________________________________ SCRATCH PC _____________________________________________________SCRATCH PC ______________________________________________________SCRATCH PC________________________________________________________________ SCRATCH PC"/>
+    </comp>
+    <comp lib="0" loc="(960,2160)" name="Tunnel">
+      <a name="label" val="LOAD A"/>
+    </comp>
+    <comp lib="0" loc="(610,690)" name="Tunnel">
+      <a name="width" val="8"/>
+      <a name="label" val="ROM --&gt; BUS"/>
+    </comp>
+    <comp lib="1" loc="(1300,2090)" name="Buffer">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(160,670)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="LOAD C"/>
+    </comp>
+    <comp lib="0" loc="(890,1560)" name="Pull Resistor"/>
+    <comp lib="4" loc="(1370,1520)" name="D Flip-Flop"/>
+    <comp lib="1" loc="(160,650)" name="Buffer">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="1" loc="(810,500)" name="NOT Gate">
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="0" loc="(190,2510)" name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="1" loc="(70,350)" name="Buffer">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(970,1860)" name="Tunnel">
+      <a name="label" val="COMMAND"/>
+    </comp>
+    <comp lib="0" loc="(820,2610)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="A --&gt; PROVE"/>
+    </comp>
+    <comp lib="6" loc="(343,3300)" name="Text">
+      <a name="text" val="d"/>
+    </comp>
+    <comp lib="1" loc="(930,1480)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+      <a name="control" val="left"/>
+    </comp>
+    <comp lib="0" loc="(930,2610)" name="Tunnel">
+      <a name="label" val="LOAD A"/>
+    </comp>
+    <comp lib="0" loc="(890,2070)" name="Pull Resistor"/>
+    <comp lib="1" loc="(930,2000)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+      <a name="control" val="left"/>
+    </comp>
+    <comp lib="1" loc="(840,2610)" name="Buffer"/>
+    <comp lib="0" loc="(2030,990)" name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(1420,2150)" name="Tunnel">
+      <a name="label" val="SCREEN SAVE"/>
+    </comp>
+    <comp lib="0" loc="(1290,1870)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="JUMP"/>
+    </comp>
+    <comp lib="0" loc="(410,460)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="SCREEN 6"/>
+    </comp>
+    <comp lib="1" loc="(1420,2400)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+      <a name="control" val="left"/>
+    </comp>
+    <comp lib="4" loc="(560,280)" name="RAM">
+      <a name="bus" val="separate"/>
+    </comp>
+    <comp lib="1" loc="(930,2100)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+      <a name="control" val="left"/>
+    </comp>
+    <comp lib="4" loc="(860,510)" name="Register"/>
+    <comp lib="0" loc="(90,800)" name="Tunnel">
+      <a name="label" val="COMMAND"/>
+    </comp>
+    <comp lib="1" loc="(970,1560)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="4" loc="(940,1400)" name="D Flip-Flop"/>
+    <comp lib="1" loc="(1400,1400)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="0" loc="(1430,2470)" name="Tunnel">
+      <a name="label" val="COMMAND"/>
+    </comp>
+    <comp lib="1" loc="(270,1610)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="0" loc="(960,2350)" name="Tunnel">
+      <a name="label" val="LOAD A"/>
+    </comp>
+    <comp lib="1" loc="(960,2190)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="0" loc="(870,2390)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="8"/>
+      <a name="label" val="ROM --&gt; BUS"/>
+    </comp>
+    <comp lib="0" loc="(410,480)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="SCREEN 8"/>
+    </comp>
+    <comp lib="0" loc="(1310,1460)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="8"/>
+      <a name="label" val="RAM --&gt; BUS"/>
+    </comp>
+    <comp lib="0" loc="(1290,1660)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="CLOCK"/>
+    </comp>
+    <comp lib="2" loc="(1600,400)" name="Decoder"/>
+    <comp lib="1" loc="(450,340)" name="Buffer">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(1310,1740)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="8"/>
+      <a name="label" val="RAM --&gt; BUS"/>
+    </comp>
+    <comp lib="0" loc="(2120,790)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="incoming" val="16"/>
+      <a name="bit1" val="0"/>
+      <a name="bit2" val="0"/>
+      <a name="bit3" val="0"/>
+      <a name="bit4" val="0"/>
+      <a name="bit5" val="0"/>
+      <a name="bit6" val="0"/>
+      <a name="bit7" val="0"/>
+      <a name="bit8" val="1"/>
+      <a name="bit9" val="1"/>
+      <a name="bit10" val="1"/>
+      <a name="bit11" val="1"/>
+      <a name="bit12" val="1"/>
+      <a name="bit13" val="1"/>
+      <a name="bit14" val="1"/>
+      <a name="bit15" val="1"/>
+    </comp>
+    <comp lib="4" loc="(1850,1340)" name="Register">
+      <a name="trigger" val="high"/>
+    </comp>
+    <comp lib="1" loc="(1360,1430)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+      <a name="control" val="left"/>
+    </comp>
+    <comp lib="1" loc="(1600,480)" name="Buffer"/>
+    <comp lib="1" loc="(970,1860)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="1" loc="(970,1400)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="4" loc="(940,1540)" name="D Flip-Flop"/>
+    <comp lib="1" loc="(1400,1850)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="1" loc="(200,280)" name="Buffer">
+      <a name="facing" val="west"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(80,640)" name="Pull Resistor"/>
+    <comp lib="4" loc="(1390,2400)" name="Register">
+      <a name="trigger" val="high"/>
+    </comp>
+    <comp lib="0" loc="(2030,1410)" name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(190,500)" name="Pull Resistor"/>
+    <comp lib="0" loc="(190,3210)" name="Pull Resistor"/>
+    <comp lib="2" loc="(230,1050)" name="Decoder">
+      <a name="select" val="4"/>
+    </comp>
+    <comp lib="1" loc="(270,3050)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="0" loc="(1790,1230)" name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="2" loc="(230,3230)" name="Decoder">
+      <a name="selloc" val="tr"/>
+      <a name="select" val="4"/>
+    </comp>
+    <comp lib="1" loc="(970,1380)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="0" loc="(190,350)" name="Pull Resistor"/>
+    <comp lib="0" loc="(190,1790)" name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(1790,930)" name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="4" loc="(1390,2150)" name="D Flip-Flop"/>
+    <comp lib="0" loc="(510,360)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="LOAD RAM"/>
+    </comp>
+    <comp lib="0" loc="(2130,850)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="SCREEN 7"/>
+    </comp>
+    <comp lib="0" loc="(450,360)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="SAVE RAM"/>
+    </comp>
+    <comp lib="0" loc="(1400,1400)" name="Tunnel">
+      <a name="label" val="SAVE A"/>
+    </comp>
+    <comp lib="0" loc="(1400,1680)" name="Tunnel">
+      <a name="label" val="SAVE C"/>
+    </comp>
+    <comp lib="1" loc="(1380,2060)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+      <a name="control" val="left"/>
+    </comp>
+    <comp lib="1" loc="(930,1730)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+      <a name="control" val="left"/>
+    </comp>
+    <comp lib="0" loc="(1320,2400)" name="Pull Resistor"/>
+    <comp lib="0" loc="(780,450)" name="Pull Resistor"/>
+    <comp lib="0" loc="(1020,2440)" name="Pull Resistor"/>
+    <comp lib="0" loc="(1290,2400)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="8"/>
+      <a name="label" val="ROM --&gt; BUS"/>
+    </comp>
+    <comp lib="0" loc="(2130,490)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="SCREEN 1"/>
+    </comp>
+    <comp lib="0" loc="(1400,1640)" name="Tunnel">
+      <a name="label" val="LOAD RAM"/>
+    </comp>
+    <comp lib="0" loc="(960,2190)" name="Tunnel">
+      <a name="label" val="LOAD B"/>
+    </comp>
+    <comp lib="0" loc="(1310,2060)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="8"/>
+      <a name="label" val="ROM --&gt; BUS"/>
+    </comp>
+    <comp lib="1" loc="(1400,1660)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="0" loc="(1400,1380)" name="Tunnel">
+      <a name="label" val="COMMAND"/>
+    </comp>
+    <comp lib="0" loc="(970,1700)" name="Tunnel">
+      <a name="label" val="SAVE RAM"/>
+    </comp>
+    <comp lib="0" loc="(1570,410)" name="Splitter">
+      <a name="incoming" val="8"/>
+      <a name="appear" val="right"/>
+      <a name="bit2" val="1"/>
+      <a name="bit3" val="1"/>
+      <a name="bit4" val="1"/>
+      <a name="bit5" val="none"/>
+      <a name="bit6" val="none"/>
+      <a name="bit7" val="none"/>
+    </comp>
+    <comp lib="0" loc="(760,510)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="8"/>
+      <a name="label" val="CLOCK CYCLE"/>
+    </comp>
+    <comp lib="1" loc="(930,1620)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+      <a name="control" val="left"/>
+    </comp>
+    <comp lib="1" loc="(970,2050)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="1" loc="(270,3230)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="0" loc="(450,620)" name="Tunnel">
+      <a name="label" val="CLOCK"/>
+    </comp>
+    <comp lib="0" loc="(50,360)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="width" val="8"/>
+      <a name="label" val="BUS --&gt; A"/>
+    </comp>
+    <comp lib="0" loc="(860,1560)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="B --&gt; RAM"/>
+    </comp>
+    <comp lib="4" loc="(1850,560)" name="Register">
+      <a name="trigger" val="high"/>
+    </comp>
+    <comp lib="2" loc="(230,1770)" name="Decoder">
+      <a name="select" val="4"/>
+    </comp>
+    <comp lib="0" loc="(970,2050)" name="Tunnel">
+      <a name="label" val="SAVE C"/>
+    </comp>
+    <comp lib="1" loc="(950,2250)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+      <a name="control" val="left"/>
+    </comp>
+    <comp lib="0" loc="(1540,410)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="8"/>
+      <a name="label" val="SCREEN SECTOR"/>
+    </comp>
+    <comp lib="1" loc="(930,1760)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+      <a name="control" val="left"/>
+    </comp>
+    <comp lib="0" loc="(410,530)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="SCREEN 13"/>
+    </comp>
+    <comp lib="0" loc="(1790,1050)" name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="1" loc="(1400,1520)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="0" loc="(860,1860)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="ROM --&gt; A"/>
+    </comp>
+    <comp lib="1" loc="(790,510)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+      <a name="control" val="left"/>
+    </comp>
+    <comp lib="1" loc="(1430,2470)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="0" loc="(970,1540)" name="Tunnel">
+      <a name="label" val="COMMAND"/>
+    </comp>
+    <comp lib="0" loc="(2030,570)" name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="2" loc="(230,2130)" name="Decoder">
+      <a name="select" val="4"/>
+    </comp>
+    <comp lib="0" loc="(270,1070)" name="Tunnel">
+      <a name="label" val="JUMP"/>
+    </comp>
+    <comp lib="0" loc="(1400,1870)" name="Tunnel">
+      <a name="label" val="COMMAND"/>
+    </comp>
+    <comp lib="0" loc="(2120,610)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="incoming" val="16"/>
+      <a name="bit1" val="0"/>
+      <a name="bit2" val="0"/>
+      <a name="bit3" val="0"/>
+      <a name="bit4" val="0"/>
+      <a name="bit5" val="0"/>
+      <a name="bit6" val="0"/>
+      <a name="bit7" val="0"/>
+      <a name="bit8" val="1"/>
+      <a name="bit9" val="1"/>
+      <a name="bit10" val="1"/>
+      <a name="bit11" val="1"/>
+      <a name="bit12" val="1"/>
+      <a name="bit13" val="1"/>
+      <a name="bit14" val="1"/>
+      <a name="bit15" val="1"/>
+    </comp>
+    <comp lib="0" loc="(2120,1270)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="incoming" val="16"/>
+      <a name="bit1" val="0"/>
+      <a name="bit2" val="0"/>
+      <a name="bit3" val="0"/>
+      <a name="bit4" val="0"/>
+      <a name="bit5" val="0"/>
+      <a name="bit6" val="0"/>
+      <a name="bit7" val="0"/>
+      <a name="bit8" val="1"/>
+      <a name="bit9" val="1"/>
+      <a name="bit10" val="1"/>
+      <a name="bit11" val="1"/>
+      <a name="bit12" val="1"/>
+      <a name="bit13" val="1"/>
+      <a name="bit14" val="1"/>
+      <a name="bit15" val="1"/>
+    </comp>
+    <comp lib="0" loc="(810,2570)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="8"/>
+      <a name="label" val="A --&gt; BUS"/>
+    </comp>
+    <comp lib="1" loc="(270,3060)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="0" loc="(1790,1170)" name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(1400,1360)" name="Tunnel">
+      <a name="label" val="LOAD RAM"/>
+    </comp>
+    <comp lib="1" loc="(70,540)" name="Buffer"/>
+    <comp lib="0" loc="(2030,810)" name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="1" loc="(170,350)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(880,2000)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="8"/>
+      <a name="label" val="ROM --&gt; BUS"/>
+    </comp>
+    <comp lib="1" loc="(1360,1600)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+      <a name="control" val="left"/>
+    </comp>
+    <comp lib="0" loc="(2030,1170)" name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="1" loc="(1310,1540)" name="Buffer"/>
+    <comp lib="4" loc="(2090,860)" name="Register">
+      <a name="trigger" val="high"/>
+    </comp>
+    <comp lib="0" loc="(580,280)" name="Tunnel">
+      <a name="width" val="8"/>
+      <a name="label" val="RAM --&gt; BUS"/>
+    </comp>
+    <comp lib="2" loc="(230,1070)" name="Decoder">
+      <a name="selloc" val="tr"/>
+      <a name="select" val="4"/>
+    </comp>
+    <comp lib="0" loc="(1420,2170)" name="Tunnel">
+      <a name="label" val="COMMAND"/>
+    </comp>
+    <comp lib="0" loc="(880,2100)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="8"/>
+      <a name="label" val="ROM --&gt; BUS"/>
+    </comp>
+    <comp lib="0" loc="(1400,1540)" name="Tunnel">
+      <a name="label" val="SAVE B"/>
+    </comp>
+    <comp lib="0" loc="(860,1540)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="CLOCK"/>
+    </comp>
+    <comp lib="4" loc="(570,690)" name="ROM">
+      <a name="contents">addr/data: 8 8
+0 d0 0 ff b1 0 a0 1
+40 c2 0 a0 20 11 0 1
+a0 1 11 1 1a d0 1 8
+10 4 d0 1 1 0 0 0
+d2 1 0 10 4
+</a>
+    </comp>
+    <comp lib="0" loc="(1290,1850)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="CLOCK"/>
+    </comp>
+    <comp lib="0" loc="(970,1680)" name="Tunnel">
+      <a name="label" val="COMMAND"/>
+    </comp>
+    <comp lib="0" loc="(2120,1030)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="incoming" val="16"/>
+      <a name="bit1" val="0"/>
+      <a name="bit2" val="0"/>
+      <a name="bit3" val="0"/>
+      <a name="bit4" val="0"/>
+      <a name="bit5" val="0"/>
+      <a name="bit6" val="0"/>
+      <a name="bit7" val="0"/>
+      <a name="bit8" val="1"/>
+      <a name="bit9" val="1"/>
+      <a name="bit10" val="1"/>
+      <a name="bit11" val="1"/>
+      <a name="bit12" val="1"/>
+      <a name="bit13" val="1"/>
+      <a name="bit14" val="1"/>
+      <a name="bit15" val="1"/>
+    </comp>
+    <comp lib="0" loc="(2030,1350)" name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="1" loc="(270,2690)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="1" loc="(1360,1710)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+      <a name="control" val="left"/>
+    </comp>
+    <comp lib="2" loc="(230,2510)" name="Decoder">
+      <a name="selloc" val="tr"/>
+      <a name="select" val="4"/>
+    </comp>
+    <comp lib="0" loc="(1420,2200)" name="Tunnel">
+      <a name="width" val="8"/>
+      <a name="label" val="RAM ADDRESS"/>
+    </comp>
+    <comp lib="1" loc="(1400,1380)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="0" loc="(2120,970)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="incoming" val="16"/>
+      <a name="bit1" val="0"/>
+      <a name="bit2" val="0"/>
+      <a name="bit3" val="0"/>
+      <a name="bit4" val="0"/>
+      <a name="bit5" val="0"/>
+      <a name="bit6" val="0"/>
+      <a name="bit7" val="0"/>
+      <a name="bit8" val="1"/>
+      <a name="bit9" val="1"/>
+      <a name="bit10" val="1"/>
+      <a name="bit11" val="1"/>
+      <a name="bit12" val="1"/>
+      <a name="bit13" val="1"/>
+      <a name="bit14" val="1"/>
+      <a name="bit15" val="1"/>
+    </comp>
+    <comp lib="3" loc="(930,2250)" name="Adder"/>
+    <comp lib="0" loc="(380,350)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="CLOCK"/>
+    </comp>
+    <comp lib="0" loc="(190,2130)" name="Pull Resistor"/>
+    <comp lib="0" loc="(860,1840)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="CLOCK"/>
+    </comp>
+    <comp lib="0" loc="(1790,570)" name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(80,500)" name="Pull Resistor"/>
+    <comp lib="1" loc="(170,500)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(890,1420)" name="Pull Resistor"/>
+    <comp lib="0" loc="(1790,1410)" name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(2120,1210)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="incoming" val="16"/>
+      <a name="bit1" val="0"/>
+      <a name="bit2" val="0"/>
+      <a name="bit3" val="0"/>
+      <a name="bit4" val="0"/>
+      <a name="bit5" val="0"/>
+      <a name="bit6" val="0"/>
+      <a name="bit7" val="0"/>
+      <a name="bit8" val="1"/>
+      <a name="bit9" val="1"/>
+      <a name="bit10" val="1"/>
+      <a name="bit11" val="1"/>
+      <a name="bit12" val="1"/>
+      <a name="bit13" val="1"/>
+      <a name="bit14" val="1"/>
+      <a name="bit15" val="1"/>
+    </comp>
+    <comp lib="0" loc="(1790,870)" name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(890,1700)" name="Pull Resistor"/>
+    <comp lib="0" loc="(810,460)" name="Constant">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(1290,1380)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="CLOCK"/>
+    </comp>
+    <comp lib="0" loc="(210,830)" name="Pull Resistor"/>
+    <comp lib="4" loc="(940,1950)" name="D Flip-Flop"/>
+    <comp lib="1" loc="(400,300)" name="Buffer">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="1" loc="(270,2700)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="0" loc="(190,1410)" name="Pull Resistor"/>
+    <comp lib="0" loc="(1310,1600)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="8"/>
+      <a name="label" val="RAM --&gt; BUS"/>
+    </comp>
+    <comp lib="0" loc="(930,2440)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="8"/>
+      <a name="label" val="A --&gt; BUS"/>
+    </comp>
     <comp lib="0" loc="(960,2220)" name="Tunnel">
       <a name="label" val="SAVE C"/>
+    </comp>
+    <comp lib="4" loc="(1850,740)" name="Register">
+      <a name="trigger" val="high"/>
+    </comp>
+    <comp lib="0" loc="(410,610)" name="Pin">
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(850,350)" name="Probe">
+      <a name="radix" val="10unsigned"/>
+    </comp>
+    <comp lib="0" loc="(890,1970)" name="Pull Resistor"/>
+    <comp lib="0" loc="(960,1620)" name="Tunnel">
+      <a name="width" val="8"/>
+      <a name="label" val="RAM DATA"/>
+    </comp>
+    <comp lib="0" loc="(160,530)" name="Tunnel">
+      <a name="facing" val="north"/>
+      <a name="label" val="LOAD B"/>
+    </comp>
+    <comp lib="0" loc="(1620,460)" name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(190,2870)" name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(1790,1350)" name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="4" loc="(1850,1400)" name="Register">
+      <a name="trigger" val="high"/>
+    </comp>
+    <comp lib="0" loc="(970,1400)" name="Tunnel">
+      <a name="label" val="COMMAND"/>
+    </comp>
+    <comp lib="0" loc="(220,280)" name="Tunnel">
+      <a name="width" val="8"/>
+      <a name="label" val="PROVE"/>
+    </comp>
+    <comp lib="0" loc="(2130,1090)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="SCREEN 11"/>
+    </comp>
+    <comp lib="1" loc="(880,1560)" name="Buffer"/>
+    <comp lib="0" loc="(410,420)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="SCREEN 2"/>
+    </comp>
+    <comp lib="0" loc="(410,410)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="SCREEN 1"/>
+    </comp>
+    <comp lib="0" loc="(2120,730)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="incoming" val="16"/>
+      <a name="bit1" val="0"/>
+      <a name="bit2" val="0"/>
+      <a name="bit3" val="0"/>
+      <a name="bit4" val="0"/>
+      <a name="bit5" val="0"/>
+      <a name="bit6" val="0"/>
+      <a name="bit7" val="0"/>
+      <a name="bit8" val="1"/>
+      <a name="bit9" val="1"/>
+      <a name="bit10" val="1"/>
+      <a name="bit11" val="1"/>
+      <a name="bit12" val="1"/>
+      <a name="bit13" val="1"/>
+      <a name="bit14" val="1"/>
+      <a name="bit15" val="1"/>
+    </comp>
+    <comp lib="0" loc="(880,1890)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="8"/>
+      <a name="label" val="ROM --&gt; BUS"/>
+    </comp>
+    <comp lib="0" loc="(880,1480)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="8"/>
+      <a name="label" val="A --&gt; BUS"/>
+    </comp>
+    <comp lib="0" loc="(1040,2460)" name="Tunnel">
+      <a name="label" val="JUMP"/>
+    </comp>
+    <comp lib="1" loc="(960,2160)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="3" loc="(860,450)" name="Adder"/>
+    <comp lib="0" loc="(860,1420)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="A --&gt; RAM"/>
+    </comp>
+    <comp lib="1" loc="(970,1660)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="0" loc="(970,1520)" name="Tunnel">
+      <a name="label" val="LOAD B"/>
+    </comp>
+    <comp lib="1" loc="(880,1860)" name="Buffer"/>
+    <comp lib="1" loc="(1040,2460)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="0" loc="(270,1610)" name="Tunnel">
+      <a name="label" val="ADD A + B"/>
+    </comp>
+    <comp lib="0" loc="(1420,2230)" name="Tunnel">
+      <a name="width" val="8"/>
+      <a name="label" val="SCREEN SECTOR"/>
+    </comp>
+    <comp lib="0" loc="(410,300)" name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(960,2250)" name="Tunnel">
+      <a name="width" val="8"/>
+      <a name="label" val="BUS --&gt; C"/>
+    </comp>
+    <comp lib="4" loc="(1850,500)" name="Register">
+      <a name="trigger" val="high"/>
+    </comp>
+    <comp lib="0" loc="(970,2070)" name="Tunnel">
+      <a name="label" val="COMMAND"/>
+    </comp>
+    <comp lib="6" loc="(331,2029)" name="Text">
+      <a name="text" val="6"/>
+    </comp>
+    <comp lib="0" loc="(410,450)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="SCREEN 5"/>
+    </comp>
+    <comp lib="0" loc="(1420,2010)" name="Tunnel">
+      <a name="label" val="COMMAND"/>
+    </comp>
+    <comp lib="0" loc="(880,1730)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="8"/>
+      <a name="label" val="ROM --&gt; BUS"/>
+    </comp>
+    <comp lib="1" loc="(270,2890)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="0" loc="(410,500)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="SCREEN 10"/>
+    </comp>
+    <comp lib="0" loc="(2120,490)" name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="incoming" val="16"/>
+      <a name="bit1" val="0"/>
+      <a name="bit2" val="0"/>
+      <a name="bit3" val="0"/>
+      <a name="bit4" val="0"/>
+      <a name="bit5" val="0"/>
+      <a name="bit6" val="0"/>
+      <a name="bit7" val="0"/>
+      <a name="bit8" val="1"/>
+      <a name="bit9" val="1"/>
+      <a name="bit10" val="1"/>
+      <a name="bit11" val="1"/>
+      <a name="bit12" val="1"/>
+      <a name="bit13" val="1"/>
+      <a name="bit14" val="1"/>
+      <a name="bit15" val="1"/>
+    </comp>
+    <comp lib="2" loc="(230,2870)" name="Decoder">
+      <a name="selloc" val="tr"/>
+      <a name="select" val="4"/>
+    </comp>
+    <comp lib="0" loc="(190,1430)" name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(870,2180)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="ADD A + B"/>
+    </comp>
+    <comp lib="0" loc="(410,430)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="SCREEN 3"/>
+    </comp>
+    <comp lib="0" loc="(2030,630)" name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(190,510)" name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(100,540)" name="Pull Resistor">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="0" loc="(960,1480)" name="Tunnel">
+      <a name="width" val="8"/>
+      <a name="label" val="RAM DATA"/>
+    </comp>
+    <comp lib="0" loc="(210,830)" name="Splitter">
+      <a name="facing" val="south"/>
+      <a name="incoming" val="8"/>
+      <a name="appear" val="right"/>
+      <a name="bit1" val="0"/>
+      <a name="bit2" val="0"/>
+      <a name="bit3" val="0"/>
+      <a name="bit4" val="1"/>
+      <a name="bit5" val="1"/>
+      <a name="bit6" val="1"/>
+      <a name="bit7" val="1"/>
+    </comp>
+    <comp lib="0" loc="(1420,2060)" name="Tunnel">
+      <a name="width" val="8"/>
+      <a name="label" val="RAM ADDRESS"/>
+    </comp>
+    <comp lib="0" loc="(2030,930)" name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="1" loc="(270,1070)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="2" loc="(30,880)" name="Decoder">
+      <a name="facing" val="south"/>
+      <a name="select" val="4"/>
+    </comp>
+    <comp lib="0" loc="(380,300)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="8"/>
+      <a name="label" val="RAM DATA"/>
+    </comp>
+    <comp lib="0" loc="(960,2310)" name="Tunnel">
+      <a name="label" val="LOAD RAM"/>
+    </comp>
+    <comp lib="1" loc="(880,1700)" name="Buffer"/>
+    <comp lib="1" loc="(930,1590)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+      <a name="control" val="left"/>
+    </comp>
+    <comp lib="1" loc="(930,2610)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="6" loc="(359,3677)" name="Text">
+      <a name="text" val="f"/>
+    </comp>
+    <comp lib="0" loc="(1310,1900)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="8"/>
+      <a name="label" val="ROM --&gt; BUS"/>
+    </comp>
+    <comp lib="0" loc="(1310,2090)" name="Pull Resistor"/>
+    <comp lib="0" loc="(2130,970)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="SCREEN 9"/>
+    </comp>
+    <comp lib="0" loc="(1430,2450)" name="Tunnel">
+      <a name="label" val="SAVE RAM"/>
+    </comp>
+    <comp lib="2" loc="(230,2490)" name="Decoder">
+      <a name="select" val="4"/>
+    </comp>
+    <comp lib="0" loc="(2030,750)" name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(860,2050)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="CLOCK"/>
+    </comp>
+    <comp lib="0" loc="(1790,690)" name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(2130,1030)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="SCREEN 10"/>
+    </comp>
+    <comp lib="0" loc="(970,1840)" name="Tunnel">
+      <a name="label" val="SAVE A"/>
+    </comp>
+    <comp lib="1" loc="(170,640)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(410,520)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="16"/>
+      <a name="label" val="SCREEN 12"/>
+    </comp>
+    <comp lib="0" loc="(1400,1520)" name="Tunnel">
+      <a name="label" val="COMMAND"/>
+    </comp>
+    <comp lib="4" loc="(2090,1040)" name="Register">
+      <a name="trigger" val="high"/>
+    </comp>
+    <comp lib="1" loc="(780,450)" name="Buffer"/>
+    <comp lib="0" loc="(410,670)" name="Probe"/>
+    <comp lib="0" loc="(1320,1540)" name="Pull Resistor"/>
+    <comp lib="0" loc="(270,3230)" name="Tunnel">
+      <a name="label" val="ROM --&gt; RAM"/>
+    </comp>
+    <comp lib="4" loc="(2090,1220)" name="Register">
+      <a name="trigger" val="high"/>
+    </comp>
+    <comp lib="0" loc="(190,650)" name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="4" loc="(2090,680)" name="Register">
+      <a name="trigger" val="high"/>
+    </comp>
+    <comp lib="0" loc="(2130,610)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="SCREEN 3"/>
+    </comp>
+    <comp lib="1" loc="(270,1080)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="6" loc="(359,1334)" name="Text">
+      <a name="text" val="2"/>
+    </comp>
+    <comp lib="4" loc="(930,2310)" name="D Flip-Flop"/>
+    <comp lib="6" loc="(337,1860)" name="Text">
+      <a name="text" val="5"/>
+    </comp>
+    <comp lib="0" loc="(1290,1680)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="RAM --&gt; C"/>
+    </comp>
+    <comp lib="4" loc="(2090,920)" name="Register">
+      <a name="trigger" val="high"/>
+    </comp>
+    <comp lib="6" loc="(1203,658)" name="Text"/>
+    <comp lib="0" loc="(270,1080)" name="Tunnel">
+      <a name="label" val="JUMPIF="/>
+    </comp>
+    <comp lib="4" loc="(1380,2090)" name="Register">
+      <a name="trigger" val="high"/>
+    </comp>
+    <comp lib="0" loc="(950,2390)" name="Tunnel">
+      <a name="width" val="8"/>
+      <a name="label" val="RAM ADDRESS"/>
+    </comp>
+    <comp lib="4" loc="(2090,620)" name="Register">
+      <a name="trigger" val="high"/>
+    </comp>
+    <comp lib="0" loc="(970,1970)" name="Tunnel">
+      <a name="label" val="COMMAND"/>
+    </comp>
+    <comp lib="4" loc="(1850,920)" name="Register">
+      <a name="trigger" val="high"/>
+    </comp>
+    <comp lib="0" loc="(2030,870)" name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(1310,2010)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="label" val="CLOCK"/>
+    </comp>
+    <comp lib="1" loc="(1400,1360)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="1" loc="(270,3250)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="4" loc="(1850,1280)" name="Register">
+      <a name="trigger" val="high"/>
+    </comp>
+    <comp lib="0" loc="(270,2700)" name="Tunnel">
+      <a name="label" val="RAM --&gt; A"/>
+    </comp>
+    <comp lib="4" loc="(2090,560)" name="Register">
+      <a name="trigger" val="high"/>
+    </comp>
+    <comp lib="0" loc="(1790,510)" name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(270,2690)" name="Tunnel">
+      <a name="label" val="ROM --&gt; A"/>
+    </comp>
+    <comp lib="0" loc="(270,3270)" name="Tunnel">
+      <a name="label" val="A --&gt; PROVE"/>
+    </comp>
+    <comp lib="0" loc="(1310,2200)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="8"/>
+      <a name="label" val="ROM --&gt; BUS"/>
+    </comp>
+    <comp lib="1" loc="(870,2330)" name="Buffer"/>
+    <comp lib="2" loc="(230,3590)" name="Decoder">
+      <a name="selloc" val="tr"/>
+      <a name="select" val="4"/>
+    </comp>
+    <comp lib="6" loc="(335,3136)" name="Text">
+      <a name="text" val="c"/>
+    </comp>
+    <comp lib="1" loc="(270,3270)" name="Buffer">
+      <a name="out" val="Z1"/>
+    </comp>
+    <comp lib="0" loc="(270,3250)" name="Tunnel">
+      <a name="label" val="RAM --&gt; DISPLAY"/>
+    </comp>
+    <comp lib="0" loc="(1790,1290)" name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="5" loc="(420,410)" name="DotMatrix">
+      <a name="inputtype" val="row"/>
+      <a name="matrixcols" val="16"/>
+      <a name="matrixrows" val="16"/>
+    </comp>
+    <comp lib="0" loc="(970,1560)" name="Tunnel">
+      <a name="label" val="SAVE RAM"/>
+    </comp>
+    <comp lib="0" loc="(410,630)" name="Clock"/>
+    <comp lib="4" loc="(1400,2330)" name="D Flip-Flop"/>
+    <comp lib="0" loc="(270,2880)" name="Tunnel">
+      <a name="label" val="RAM --&gt; B"/>
+    </comp>
+    <comp lib="0" loc="(960,1760)" name="Tunnel">
+      <a name="width" val="8"/>
+      <a name="label" val="RAM DATA"/>
+    </comp>
+    <comp lib="1" loc="(1560,410)" name="Buffer">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(200,350)" name="Tunnel">
+      <a name="width" val="8"/>
+      <a name="label" val="A --&gt; BUS"/>
+    </comp>
+    <comp lib="0" loc="(2130,1330)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="SCREEN 15"/>
+    </comp>
+    <comp lib="6" loc="(331,2768)" name="Text">
+      <a name="text" val="a"/>
+    </comp>
+    <comp lib="0" loc="(1390,1900)" name="Tunnel">
+      <a name="width" val="8"/>
+      <a name="label" val="CLOCK CYCLE"/>
+    </comp>
+    <comp lib="0" loc="(270,2870)" name="Tunnel">
+      <a name="label" val="ROM --&gt; B"/>
+    </comp>
+    <comp lib="0" loc="(2130,1150)" name="Tunnel">
+      <a name="width" val="16"/>
+      <a name="label" val="SCREEN 12"/>
+    </comp>
+    <comp lib="0" loc="(190,3570)" name="Pull Resistor"/>
+    <comp lib="6" loc="(339,961)" name="Text">
+      <a name="text" val="0"/>
+    </comp>
+    <comp lib="2" loc="(1630,430)" name="Decoder">
+      <a name="facing" val="south"/>
+      <a name="select" val="4"/>
+    </comp>
+    <comp lib="0" loc="(270,3060)" name="Tunnel">
+      <a name="label" val="RAM --&gt; B"/>
+    </comp>
+    <comp lib="1" loc="(1360,1460)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+      <a name="control" val="left"/>
+    </comp>
+    <comp lib="0" loc="(1020,2420)" name="Pull Resistor"/>
+    <comp lib="1" loc="(400,280)" name="Buffer">
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="1" loc="(210,830)" name="Buffer">
+      <a name="facing" val="west"/>
+      <a name="width" val="8"/>
+    </comp>
+    <comp lib="0" loc="(1590,450)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="8"/>
+      <a name="label" val="SCREEN DATA"/>
+    </comp>
+    <comp lib="1" loc="(160,360)" name="Buffer">
+      <a name="facing" val="north"/>
+    </comp>
+    <comp lib="0" loc="(950,2000)" name="Tunnel">
+      <a name="width" val="8"/>
+      <a name="label" val="BUS --&gt; B"/>
+    </comp>
+    <comp lib="0" loc="(100,390)" name="Pull Resistor">
+      <a name="facing" val="west"/>
+    </comp>
+    <comp lib="1" loc="(1330,2030)" name="Buffer"/>
+    <comp lib="0" loc="(370,690)" name="Tunnel">
+      <a name="facing" val="east"/>
+      <a name="width" val="8"/>
+      <a name="label" val="____"/>
+    </comp>
+    <comp lib="1" loc="(920,2420)" name="Controlled Buffer">
+      <a name="width" val="8"/>
+      <a name="control" val="left"/>
+    </comp>
+    <comp lib="0" loc="(880,2330)" name="Pull Resistor"/>
+    <comp lib="1" loc="(30,800)" name="NOT Gate">
+      <a name="facing" val="west"/>
+      <a name="size" val="20"/>
+    </comp>
+    <comp lib="0" loc="(2030,510)" name="Pull Resistor">
+      <a name="facing" val="north"/>
     </comp>
   </circuit>
 </project>
