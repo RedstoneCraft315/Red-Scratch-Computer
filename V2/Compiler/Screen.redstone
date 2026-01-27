@@ -1,0 +1,17 @@
+LDA FFFF
+ATR 7FFF
+LDA 0100
+ATR 7000
+ATR 7FFE
+JMP refresh
+
+refresh:
+ATR 7000
+LDB 0001
+SUB
+CTR 7ffd
+ATR 7ffd
+RTD 0000 0000 0000
+BEQ +1
+JMP refresh
+
