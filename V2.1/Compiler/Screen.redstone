@@ -1,0 +1,93 @@
+;Single line in the midle
+
+;Line color
+LDA FFFF	;[LINE COLOR]
+ATR 7FFF ;(Display Input Color)
+
+;Line X Pos
+LDA 20	 ;[LINE X POS]
+ATR 1000	;(Line X Pos)
+ATR 7FFD ;(Display Input X)
+
+;Line Y Pos
+LDA 7F	 ;[LINE STARTING Y POS]
+ATR 1001	;(Line Y Pos)
+
+;Line length
+LDA 10	 ;[LINE LENGTH]
+ATR 1002	;(Line Length)
+ATR 3 	 ;(Line Draw Loop Times)
+
+CheckControls: ;Substracts half of the line's size to the midle point of the screen to compensate
+LDA 30
+ATR 15
+
+Wait:
+RTA 15
+LDB 1
+SUB
+CTR 15
+BEQ StopWait
+JMP Wait
+
+StopWait:
+RTA 7FFF
+LDB 20
+ADD
+CTR 7FFF
+
+KTR 	 ;Read keyboard
+RTA 7000 ;(Keyboard Output)
+LDB 77	 ;"w in ASCII"
+SUB
+BEQ CheckControls2
+CheckControls4:
+RTA 7000
+LDB 73
+SUB
+BEQ CheckControls3
+
+
+CheckControls1:
+RTA 1002 ;(Line length)
+ATR 3	 ;(Line Draw Loop Times)
+LDB 2
+DIV	 ;Divides the line lenth by 2
+CTR 0	 ;(Move C to B)
+RTB 0	 ;(Move C to B)
+RTA 1001 ;(Line Y Pos)
+SUB	 ;Substracts half of the line to the Y position
+CTR 7FFE ;(Display Input Y)
+CLD
+JMP Draw
+
+Draw: ;Draws the line
+RTA 7FFE ;(Display Input Y)
+LDB 1
+ADD	 ;Substract one to the drawing Y pos so it will draw under
+CTR 7FFE ;(Display Input Y)
+RTD 0 0 0
+RTA 3	 ;(Line Draw Loop Times)
+LDB 1
+SUB	 ;Substracts 1 to the loop times
+CTR 3	 ;(Line Draw Loop Times)
+BEQ CheckControls
+JMP Draw
+
+BRK:
+JMP BRK
+
+CheckControls2:	;Substract 1 to the Y position
+RTA 1001
+LDB 1
+SUB
+CTR 1001
+JMP CheckControls4
+
+CheckControls3: ;Add 1 to the Y position
+RTA 1001
+LDB 1
+ADD
+CTR 1001
+JMP CheckControls1
+
