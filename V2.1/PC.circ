@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project source="4.0.0" version="1.0">
-  This file is intended to be loaded by Logisim-evolution v4.0.0(https://github.com/logisim-evolution/).
+<project source="5.0.0" version="1.0">
+  This file is intended to be loaded by Logisim-evolution v5.0.0(https://github.com/logisim-evolution/).
 
   <lib desc="#Wiring" name="0">
     <tool name="Splitter">
@@ -15,9 +15,6 @@
     <tool name="Probe">
       <a name="appearance" val="classic"/>
       <a name="facing" val="west"/>
-    </tool>
-    <tool name="Pull Resistor">
-      <a name="facing" val="north"/>
     </tool>
     <tool name="POR">
       <a name="facing" val="south"/>
@@ -36,18 +33,19 @@
   </lib>
   <lib desc="#Plexers" name="2"/>
   <lib desc="#Arithmetic" name="3"/>
-  <lib desc="#Memory" name="4"/>
-  <lib desc="#I/O" name="5">
+  <lib desc="#FPArithmetic" name="4"/>
+  <lib desc="#Memory" name="5"/>
+  <lib desc="#I/O" name="6">
     <tool name="Button">
       <a name="facing" val="north"/>
     </tool>
   </lib>
-  <lib desc="#TTL" name="6"/>
-  <lib desc="#TCL" name="7"/>
-  <lib desc="#Base" name="8"/>
-  <lib desc="#BFH-Praktika" name="9"/>
-  <lib desc="#Input/Output-Extra" name="10"/>
-  <lib desc="#Soc" name="11"/>
+  <lib desc="#TTL" name="7"/>
+  <lib desc="#TCL" name="8"/>
+  <lib desc="#Base" name="9"/>
+  <lib desc="#BFH-Praktika" name="10"/>
+  <lib desc="#Input/Output-Extra" name="11"/>
+  <lib desc="#Soc" name="12"/>
   <main name="main"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
@@ -55,38 +53,38 @@
     <a name="simrand" val="0"/>
   </options>
   <mappings>
-    <tool lib="8" map="Button2" name="Poke Tool"/>
-    <tool lib="8" map="Button3" name="Menu Tool"/>
-    <tool lib="8" map="Ctrl Button1" name="Menu Tool"/>
+    <tool map="Button2" name="Poke Tool"/>
+    <tool map="Button3" name="Menu Tool"/>
+    <tool map="Ctrl Button1" name="Menu Tool"/>
   </mappings>
   <toolbar>
-    <tool lib="8" name="Poke Tool"/>
-    <tool lib="8" name="Edit Tool"/>
-    <tool lib="8" name="Wiring Tool"/>
-    <tool lib="8" name="Text Tool"/>
+    <tool name="Poke Tool"/>
+    <tool name="Edit Tool"/>
+    <tool name="Wiring Tool"/>
+    <tool name="Text Tool"/>
     <sep/>
-    <tool lib="0" name="Pin"/>
-    <tool lib="0" name="Pin">
+    <tool name="Pin"/>
+    <tool name="Pin">
       <a name="facing" val="west"/>
       <a name="type" val="output"/>
     </tool>
     <sep/>
-    <tool lib="1" name="NOT Gate"/>
-    <tool lib="1" name="AND Gate"/>
-    <tool lib="1" name="OR Gate"/>
-    <tool lib="1" name="XOR Gate"/>
-    <tool lib="1" name="NAND Gate"/>
-    <tool lib="1" name="NOR Gate"/>
+    <tool name="NOT Gate"/>
+    <tool name="AND Gate"/>
+    <tool name="OR Gate"/>
+    <tool name="XOR Gate"/>
+    <tool name="NAND Gate"/>
+    <tool name="NOR Gate"/>
     <sep/>
-    <tool lib="4" name="D Flip-Flop"/>
-    <tool lib="4" name="Register"/>
+    <tool name="D Flip-Flop"/>
+    <tool name="Register"/>
   </toolbar>
   <circuit name="main">
     <a name="appearance" val="logisim_evolution"/>
     <a name="circuit" val="main"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="downloadFrequency" val="4.999995E7"/>
-    <a name="simulationFrequency" val="2048000.0"/>
+    <a name="simulationFrequency" val="256.0"/>
     <comp lib="0" loc="(1000,200)" name="Tunnel">
       <a name="facing" val="east"/>
       <a name="label" val="CClock"/>
@@ -894,6 +892,9 @@
     <comp lib="0" loc="(520,2500)" name="Pull Resistor">
       <a name="facing" val="east"/>
     </comp>
+    <comp lib="0" loc="(520,510)" name="Pull Resistor">
+      <a name="pull" val="1"/>
+    </comp>
     <comp lib="0" loc="(530,2050)" name="Pull Resistor">
       <a name="facing" val="east"/>
     </comp>
@@ -1646,219 +1647,205 @@
     <comp lib="3" loc="(570,2240)" name="Comparator">
       <a name="width" val="16"/>
     </comp>
-    <comp lib="4" loc="(1230,670)" name="Register">
+    <comp lib="5" loc="(1230,670)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
       <a name="label" val="ScreenX"/>
       <a name="showInTab" val="true"/>
     </comp>
-    <comp lib="4" loc="(1240,790)" name="Register">
+    <comp lib="5" loc="(1240,790)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
       <a name="label" val="ScreenY"/>
       <a name="showInTab" val="true"/>
     </comp>
-    <comp lib="4" loc="(1520,720)" name="Register">
+    <comp lib="5" loc="(1520,720)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
       <a name="label" val="ScreenColor"/>
       <a name="showInTab" val="true"/>
       <a name="trigger" val="high"/>
       <a name="width" val="16"/>
     </comp>
-    <comp lib="4" loc="(210,640)" name="RAM">
+    <comp lib="5" loc="(210,640)" name="RAM">
       <a name="addrWidth" val="16"/>
       <a name="appearance" val="logisim_evolution"/>
       <a name="dataWidth" val="16"/>
       <a name="enables" val="line"/>
     </comp>
-    <comp lib="4" loc="(2200,200)" name="Register">
+    <comp lib="5" loc="(2200,200)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
-      <a name="label" val="DN"/>
+      <a name="label" val="D0N"/>
       <a name="showInTab" val="true"/>
       <a name="trigger" val="falling"/>
       <a name="width" val="1"/>
     </comp>
-    <comp lib="4" loc="(2200,380)" name="Register">
+    <comp lib="5" loc="(2200,380)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
-      <a name="label" val="DI"/>
+      <a name="label" val="D2I"/>
       <a name="showInTab" val="true"/>
       <a name="trigger" val="falling"/>
       <a name="width" val="1"/>
     </comp>
-    <comp lib="4" loc="(2200,560)" name="Register">
+    <comp lib="5" loc="(2200,560)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
-      <a name="label" val="DC"/>
+      <a name="label" val="D4C"/>
       <a name="showInTab" val="true"/>
       <a name="trigger" val="falling"/>
       <a name="width" val="1"/>
     </comp>
-    <comp lib="4" loc="(2200,740)" name="Register">
+    <comp lib="5" loc="(2200,740)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
+      <a name="label" val="D6"/>
       <a name="showInTab" val="true"/>
       <a name="trigger" val="falling"/>
       <a name="width" val="1"/>
     </comp>
-    <comp lib="4" loc="(2450,290)" name="Register">
+    <comp lib="5" loc="(2450,290)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
-      <a name="label" val="DO"/>
+      <a name="label" val="D1O"/>
       <a name="showInTab" val="true"/>
       <a name="trigger" val="falling"/>
       <a name="width" val="1"/>
     </comp>
-    <comp lib="4" loc="(2450,470)" name="Register">
+    <comp lib="5" loc="(2450,470)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
-      <a name="label" val="DZ"/>
+      <a name="label" val="D3Z"/>
       <a name="showInTab" val="true"/>
       <a name="trigger" val="falling"/>
       <a name="width" val="1"/>
     </comp>
-    <comp lib="4" loc="(2450,650)" name="Register">
+    <comp lib="5" loc="(2450,650)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
+      <a name="label" val="D5"/>
       <a name="showInTab" val="true"/>
       <a name="trigger" val="falling"/>
       <a name="width" val="1"/>
     </comp>
-    <comp lib="4" loc="(2450,830)" name="Register">
+    <comp lib="5" loc="(2450,830)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
+      <a name="label" val="D7"/>
       <a name="showInTab" val="true"/>
       <a name="trigger" val="falling"/>
       <a name="width" val="1"/>
     </comp>
-    <comp lib="4" loc="(350,230)" name="Register">
+    <comp lib="5" loc="(350,230)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
       <a name="label" val="A"/>
       <a name="showInTab" val="true"/>
       <a name="trigger" val="falling"/>
       <a name="width" val="16"/>
     </comp>
-    <comp lib="4" loc="(350,360)" name="Register">
+    <comp lib="5" loc="(350,360)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
       <a name="label" val="B"/>
       <a name="showInTab" val="true"/>
       <a name="trigger" val="falling"/>
       <a name="width" val="16"/>
     </comp>
-    <comp lib="4" loc="(350,500)" name="Register">
+    <comp lib="5" loc="(350,500)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
       <a name="label" val="C"/>
       <a name="showInTab" val="true"/>
       <a name="trigger" val="falling"/>
       <a name="width" val="16"/>
     </comp>
-    <comp lib="4" loc="(390,1270)" name="D Flip-Flop">
+    <comp lib="5" loc="(390,1270)" name="D Flip-Flop">
       <a name="appearance" val="logisim_evolution"/>
     </comp>
-    <comp lib="4" loc="(390,1410)" name="D Flip-Flop">
+    <comp lib="5" loc="(390,1410)" name="D Flip-Flop">
       <a name="appearance" val="logisim_evolution"/>
     </comp>
-    <comp lib="4" loc="(390,1550)" name="D Flip-Flop">
+    <comp lib="5" loc="(390,1550)" name="D Flip-Flop">
       <a name="appearance" val="logisim_evolution"/>
     </comp>
-    <comp lib="4" loc="(390,1690)" name="D Flip-Flop">
+    <comp lib="5" loc="(390,1690)" name="D Flip-Flop">
       <a name="appearance" val="logisim_evolution"/>
     </comp>
-    <comp lib="4" loc="(540,500)" name="Register">
+    <comp lib="5" loc="(540,500)" name="Register">
       <a name="appearance" val="logisim_evolution"/>
       <a name="label" val="Flags"/>
       <a name="trigger" val="falling"/>
     </comp>
-    <comp lib="4" loc="(690,1270)" name="D Flip-Flop">
+    <comp lib="5" loc="(690,1270)" name="D Flip-Flop">
       <a name="appearance" val="logisim_evolution"/>
     </comp>
-    <comp lib="4" loc="(690,1440)" name="D Flip-Flop">
+    <comp lib="5" loc="(690,1440)" name="D Flip-Flop">
       <a name="appearance" val="logisim_evolution"/>
     </comp>
-    <comp lib="4" loc="(690,1610)" name="D Flip-Flop">
+    <comp lib="5" loc="(690,1610)" name="D Flip-Flop">
       <a name="appearance" val="logisim_evolution"/>
     </comp>
-    <comp lib="4" loc="(700,670)" name="ROM">
+    <comp lib="5" loc="(700,670)" name="ROM">
       <a name="addrWidth" val="16"/>
       <a name="appearance" val="logisim_evolution"/>
       <a name="contents">addr/data: 16 16
-a0 ffff a2 7fff a0 20 a2 1000
-a2 7ffd a0 7f a2 1001 a0 10
-a2 1002 a2 3 a0 30 a2 15
-a1 15 b0 1 42 c2 15 11
-23 10 18 a1 7fff b0 20 40
-c2 7fff d1 a1 7000 b0 77 42
-11 64 a1 7000 b0 73 42 11
-6d a1 1002 a2 3 b0 2 43
-c2 0 b1 0 a1 1001 42 c2
-7ffe d2 10 4c a1 7ffe b0 1
-40 c2 7ffe d0 0 0 0 a1
-3 b0 1 42 c2 3 11 14
-10 4c 10 62 a1 1001 b0 1
-42 c2 1001 10 32 a1 1001 b0
-1 40 c2 1001 10 39 77 a1
-7ffe b0 1 40 c2 7ffe d0 0
-0 0 a1 3 b0 1 42 c2
-3 11 14 10 77 10 8d a1
-1001 b0 1 42 c2 1001 10 5d
-a1 1001 b0 1 40 c2 1001 10
-64
+a0 ffff a2 7fff a1 7ffd b0 1
+40 c2 7ffd b0 ff 42 11 16
+d0 0 0 0 10 4 a1 7ffe
+b0 1 40 c2 7ffe 10 4 10
+1f
 </a>
       <a name="dataWidth" val="16"/>
     </comp>
-    <comp lib="4" loc="(720,170)" name="Counter">
+    <comp lib="5" loc="(720,170)" name="Counter">
       <a name="appearance" val="logisim_evolution"/>
       <a name="max" val="0xffff"/>
       <a name="width" val="16"/>
     </comp>
-    <comp lib="4" loc="(880,2460)" name="D Flip-Flop">
+    <comp lib="5" loc="(880,2460)" name="D Flip-Flop">
       <a name="appearance" val="logisim_evolution"/>
     </comp>
-    <comp lib="4" loc="(890,1940)" name="D Flip-Flop">
+    <comp lib="5" loc="(890,1940)" name="D Flip-Flop">
       <a name="appearance" val="logisim_evolution"/>
     </comp>
-    <comp lib="4" loc="(890,2110)" name="D Flip-Flop">
+    <comp lib="5" loc="(890,2110)" name="D Flip-Flop">
       <a name="appearance" val="logisim_evolution"/>
     </comp>
-    <comp lib="4" loc="(990,1270)" name="D Flip-Flop">
+    <comp lib="5" loc="(990,1270)" name="D Flip-Flop">
       <a name="appearance" val="logisim_evolution"/>
     </comp>
-    <comp lib="4" loc="(990,1440)" name="D Flip-Flop">
+    <comp lib="5" loc="(990,1440)" name="D Flip-Flop">
       <a name="appearance" val="logisim_evolution"/>
     </comp>
-    <comp lib="4" loc="(990,1610)" name="D Flip-Flop">
+    <comp lib="5" loc="(990,1610)" name="D Flip-Flop">
       <a name="appearance" val="logisim_evolution"/>
     </comp>
-    <comp lib="5" loc="(1000,200)" name="Keyboard">
+    <comp lib="6" loc="(1000,200)" name="Keyboard">
       <a name="buflen" val="255"/>
     </comp>
-    <comp lib="5" loc="(1260,550)" name="RGB Video">
+    <comp lib="6" loc="(1260,550)" name="RGB Video">
       <a name="color" val="565 RGB (16 bit)"/>
       <a name="cursor" val="No Cursor"/>
       <a name="height" val="256"/>
-      <a name="scale" val="1"/>
       <a name="width" val="256"/>
     </comp>
-    <comp lib="5" loc="(650,190)" name="Button"/>
-    <comp lib="8" loc="(1945,490)" name="Text">
+    <comp lib="6" loc="(650,190)" name="Button"/>
+    <comp lib="9" loc="(1945,490)" name="Text">
       <a name="text" val="Interrupt Disable"/>
     </comp>
-    <comp lib="8" loc="(1945,510)" name="Text">
+    <comp lib="9" loc="(1945,510)" name="Text">
       <a name="text" val="Zero"/>
     </comp>
-    <comp lib="8" loc="(1945,525)" name="Text">
+    <comp lib="9" loc="(1945,525)" name="Text">
       <a name="text" val="Carry"/>
     </comp>
-    <comp lib="8" loc="(1950,460)" name="Text">
+    <comp lib="9" loc="(1950,460)" name="Text">
       <a name="text" val="Negative"/>
     </comp>
-    <comp lib="8" loc="(1950,475)" name="Text">
+    <comp lib="9" loc="(1950,475)" name="Text">
       <a name="text" val="Overflow"/>
     </comp>
-    <comp lib="8" loc="(565,365)" name="Text">
+    <comp lib="9" loc="(565,365)" name="Text">
       <a name="text" val="Interrupt Disable"/>
     </comp>
-    <comp lib="8" loc="(565,385)" name="Text">
+    <comp lib="9" loc="(565,385)" name="Text">
       <a name="text" val="Zero"/>
     </comp>
-    <comp lib="8" loc="(565,400)" name="Text">
+    <comp lib="9" loc="(565,400)" name="Text">
       <a name="text" val="Carry"/>
     </comp>
-    <comp lib="8" loc="(570,335)" name="Text">
+    <comp lib="9" loc="(570,335)" name="Text">
       <a name="text" val="Negative"/>
     </comp>
-    <comp lib="8" loc="(570,350)" name="Text">
+    <comp lib="9" loc="(570,350)" name="Text">
       <a name="text" val="Overflow"/>
     </comp>
     <wire from="(1020,1340)" to="(1020,1350)"/>
@@ -2142,6 +2129,8 @@ a1 1001 b0 1 40 c2 1001 10
     <wire from="(520,2410)" to="(550,2410)"/>
     <wire from="(520,2660)" to="(520,2670)"/>
     <wire from="(520,2670)" to="(540,2670)"/>
+    <wire from="(520,510)" to="(520,550)"/>
+    <wire from="(520,550)" to="(540,550)"/>
     <wire from="(530,2390)" to="(530,2400)"/>
     <wire from="(530,2400)" to="(550,2400)"/>
     <wire from="(530,2650)" to="(530,2660)"/>
