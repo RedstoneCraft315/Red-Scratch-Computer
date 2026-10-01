@@ -5,15 +5,15 @@ import os
 import json
 
 # --- Configuration ---
-Ass = ["NOP","LDA","LDB","LDC","RTA","RTB","RTC","ATR","BTR","CTR","ADD","JMP","BEQ","RTD","PRV","MLT","SUB","DIV","KTR","CLD","AND","OR","XOR","NOT","SHL","SHR"]
-Hex = ["00", "A0", "B0", "C0", "A1", "B1", "C1", "A2", "B2", "C2", "40", "10", "11", "D0", "00", "41", "42", "43", "D1", "D2","60","61","62","63","64","65"]
+Ass = ["NOP","LDA","LDB","LDC","RTA","RTB","RTC","ATR","BTR","CTR","ADD","JMP","BEQ","RTD","PRV","MLT","SUB","DIV","KTR","CLD","AND","OR","XOR","NOT","SHL","SHR","SRL","SRR"]
+Hex = ["00", "A0", "B0", "C0", "A1", "B1", "C1", "A2", "B2", "C2", "40", "10", "11", "D0", "00", "41", "42", "43", "D1", "D2", "60", "61", "62", "63", "64", "65", "66", "67"]
 opcode_map = {k.upper(): v for k, v in zip(Ass, Hex)}
-instr_bytes = {"NOP":0,"LDA":1,"LDB":1,"LDC":1,"RTA":1,"RTB":1,"RTC":1,"ATR":1,"BTR":1,"CTR":1,"ADD":0,"JMP":1,"BEQ":1,"RTD":3,"PRV":0,"MLT":0,"SUB":0,"DIV":0,"KTR":0,"CLD":0,"AND":0,"OR":0,"XOR":0,"NOT":0,"SHL":0,"SHR":0}
+instr_bytes = {"NOP":0,"LDA":1,"LDB":1,"LDC":1,"RTA":1,"RTB":1,"RTC":1,"ATR":1,"BTR":1,"CTR":1,"ADD":0,"JMP":1,"BEQ":1,"RTD":3,"PRV":0,"MLT":0,"SUB":0,"DIV":0,"KTR":0,"CLD":0,"AND":0,"OR":0,"XOR":0,"NOT":0,"SHL":0,"SHR":0,"SRL":0,"SRR":0}
 
 file_path = None
 compiled_path = None
 CONFIG_FILE = os.path.join(os.path.dirname(__file__), "redstone_config.json")
-current_theme = "Light"
+current_theme = "Dark"
 
 # ---------- Preferences ----------
 def load_config():
@@ -22,15 +22,15 @@ def load_config():
         try:
             with open(CONFIG_FILE, "r", encoding="utf-8") as f:
                 cfg = json.load(f)
-            current_theme = cfg.get("theme","Light")
+            current_theme = cfg.get("theme","Dark")
             file_path = cfg.get("last_file", None)
             window_geometry = cfg.get("window_geometry", None).replace("1x1","800x600")
         except:
-            current_theme = "Light"
+            current_theme = "Dark"
             file_path = None
             window_geometry = None
     else:
-        current_theme = "Light"
+        current_theme = "Dark"
         file_path = None
         window_geometry = None
 
