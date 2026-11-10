@@ -15,7 +15,11 @@ RTA 7FFD ;(Display Input X)
 LDB 1
 ADD	 ;Substract one to the drawing X pos so it will draw under
 CTR 7FFD ;(Display Input X)
+
+
 CTR 7FFF
+
+
 LDB FF
 AND
 NOP
@@ -36,5 +40,6 @@ JMP RTNNextLine
 
 Halt: ;Halts
 JMP Halt
+
 
 
