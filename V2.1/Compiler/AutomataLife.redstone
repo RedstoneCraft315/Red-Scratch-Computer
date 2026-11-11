@@ -1,14 +1,15 @@
-; X Cursor: 7FFD
-; Y Cursor: 7FFE
+; X Cursor: 		7FFD
+; Y Cursor:		7FFE
+; Color:		7FFF
 
 LDA FFFF
 ATR 7FFD
 
-; 256x256 - 2000-4000
+LDA AFAF
+ATR 2000
 
-;Line color
-LDA FFFF	;[LINE COLOR]
-ATR 7FFF ;(Display Input Color)
+; 256x256 - 2000-4000x0 RAM
+
 
 Draw: ;Draws the line
 RTA 7FFD ;(Display Input X)
@@ -40,6 +41,5 @@ JMP RTNNextLine
 
 Halt: ;Halts
 JMP Halt
-
 
 

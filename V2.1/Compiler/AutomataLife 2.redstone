@@ -1,0 +1,53 @@
+; X Cursor: 		7FFD
+; Y Cursor:		7FFE
+; Color:		7FFF
+
+LDA FFFF
+ATR 7FFD
+
+LDA AFAF
+ATR 2000
+
+; 256x256 - 2000-4000x0 RAM
+
+
+Draw: ;Draws the line
+RTA 7FFD ;(Display Input X)
+LDB 1
+ADD	 ;Substract one to the drawing X pos so it will draw under
+CTR 7FFD ;(Display Input X)
+ATR 0000
+BTR 0001
+CTR 0002
+
+RTA 7FFD
+LDB 0008
+MOD
+CTR 0004
+
+RTA 0000
+RTB 0001
+RTC 0002
+LDB FF
+AND
+NOP
+CTR 0000
+RTA 0000
+SUB
+BEQ NextLine
+RTNNextLine:
+RTD 0 0 0
+JMP Draw
+
+NextLine: ;Moves to the next line
+RTA 7FFE ;(Display Input Y)
+LDB 1
+ADD	 ;Substract one to the drawing X pos so it will draw under
+CTR 7FFE ;(Display Input Y)
+JMP RTNNextLine
+
+Halt: ;Halts
+JMP Halt
+
+
+
