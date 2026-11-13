@@ -1,19 +1,20 @@
 # DESCRIPTION: Red's Assembly Compiler — GUI editor + assembler for a custom 16-bit CPU; supports labels, numeric jump rebasing, themes (Light/Dark/Dark green), file I/O, undo/redo, compile (Ctrl+U) and save (Ctrl+S); remembers theme, last opened file, and (only when requested via View->Save window position or Ctrl+Alt+G) window size & position in config; update this single-line DESCRIPTION when modifying the compiler so future assistants/users have context.
 import tkinter as tk
-from tkinter import filedialog, messagebox
+from tkinter import filedialog, messagebox, simpledialog
 import os
 import json
+import re
 
 # --- Configuration ---
-Ass = ["NOP","LDA","LDB","LDC","RTA","RTB","RTC","ATR","BTR","CTR","ADD","JMP","BEQ","RTD","PRV","MLT","SUB","DIV","KTR","CLD","AND","OR","XOR","NOT","SHL","SHR"]
-Hex = ["00", "A0", "B0", "C0", "A1", "B1", "C1", "A2", "B2", "C2", "40", "10", "11", "D0", "00", "41", "42", "43", "D1", "D2","60","61","62","63","64","65"]
+Ass = ["NOP","LDA","LDB","LDC","RTA","RTB","RTC","ATR","BTR","CTR","ADD","JMP","BEQ","RTD","PRV","MLT","SUB","DIV","KTR","CLD","AND","OR","XOR","NOT","SHL","SHR","SRL","SRR","MOD"]
+Hex = ["00", "A0", "B0", "C0", "A1", "B1", "C1", "A2", "B2", "C2", "40", "10", "11", "D0", "00", "41", "42", "43", "D1", "D2", "60", "61", "62", "63", "64", "65", "66", "67", "44"]
 opcode_map = {k.upper(): v for k, v in zip(Ass, Hex)}
-instr_bytes = {"NOP":0,"LDA":1,"LDB":1,"LDC":1,"RTA":1,"RTB":1,"RTC":1,"ATR":1,"BTR":1,"CTR":1,"ADD":0,"JMP":1,"BEQ":1,"RTD":3,"PRV":0,"MLT":0,"SUB":0,"DIV":0,"KTR":0,"CLD":0,"AND":0,"OR":0,"XOR":0,"NOT":0,"SHL":0,"SHR":0}
+instr_bytes = {"NOP":0,"LDA":1,"LDB":1,"LDC":1,"RTA":1,"RTB":1,"RTC":1,"ATR":1,"BTR":1,"CTR":1,"ADD":0,"JMP":1,"BEQ":1,"RTD":3,"PRV":0,"MLT":0,"SUB":0,"DIV":0,"KTR":0,"CLD":0,"AND":0,"OR":0,"XOR":0,"NOT":0,"SHL":0,"SHR":0,"SRL":0,"SRR":0,"MOD":0}
 
 file_path = None
 compiled_path = None
 CONFIG_FILE = os.path.join(os.path.dirname(__file__), "redstone_config.json")
-current_theme = "Light"
+current_theme = "Dark"
 
 # ---------- Preferences ----------
 def load_config():
@@ -22,15 +23,15 @@ def load_config():
         try:
             with open(CONFIG_FILE, "r", encoding="utf-8") as f:
                 cfg = json.load(f)
-            current_theme = cfg.get("theme","Light")
+            current_theme = cfg.get("theme","Dark")
             file_path = cfg.get("last_file", None)
             window_geometry = cfg.get("window_geometry", None).replace("1x1","800x600")
         except:
-            current_theme = "Light"
+            current_theme = "Dark"
             file_path = None
             window_geometry = None
     else:
-        current_theme = "Light"
+        current_theme = "Dark"
         file_path = None
         window_geometry = None
 
@@ -117,6 +118,7 @@ filemenu.add_command(label="Save", accelerator="Ctrl+S", command=lambda: do_save
 filemenu.add_command(label="Save as...", accelerator="Ctrl+Shift+S", command=lambda: do_save_as())
 filemenu.add_separator()
 filemenu.add_command(label="Open", accelerator="Ctrl+O", command=lambda: do_open())
+filemenu.add_command(label="Insert files...", command=lambda: insert_files())
 menubar.add_cascade(label="File", menu=filemenu)
 
 # Edit menu
@@ -151,6 +153,8 @@ save_btn = tk.Button(toolbar,text="Save",width=9,command=lambda: do_save())
 save_btn.pack(side="left", padx=2)
 open_btn = tk.Button(toolbar,text="Open",width=9,command=lambda: do_open())
 open_btn.pack(side="left", padx=2)
+insert_files_btn = tk.Button(toolbar,text="Insert files",width=11,command=lambda: insert_files())
+insert_files_btn.pack(side="left", padx=2)
 save_compiled_btn = tk.Button(toolbar,text="Save Compiled",width=12,command=lambda: save_compiled())
 save_compiled_btn.pack(side="left", padx=2)
 
@@ -398,6 +402,118 @@ def assemble_and_rebase():
 
     status_var.set("Compiled: labels resolved, jumps rebased")
 
+def _disassemble_words(words):
+    reverse_opcodes = {}
+    for mnemonic, opcode in opcode_map.items():
+        value = int(opcode, 16)
+        if value not in reverse_opcodes or mnemonic == "NOP":
+            reverse_opcodes[value] = mnemonic
+
+    instructions = []
+    word_index = 0
+    while word_index < len(words):
+        opcode = words[word_index]
+        if opcode > 0xFF or opcode not in reverse_opcodes:
+            return None
+        mnemonic = reverse_opcodes[opcode]
+        operand_count = instr_bytes[mnemonic]
+        if word_index + 1 + operand_count > len(words):
+            return None
+        operands = words[word_index + 1:word_index + 1 + operand_count]
+        instructions.append((word_index, mnemonic, operands))
+        word_index += 1 + operand_count
+
+    instruction_addresses = {address for address, _, _ in instructions}
+    jump_targets = {
+        operands[0]
+        for _, mnemonic, operands in instructions
+        if mnemonic in ("JMP", "BEQ") and operands
+        and operands[0] in instruction_addresses | {len(words)}
+    }
+
+    lines = []
+    for address, mnemonic, operands in instructions:
+        if address in jump_targets:
+            lines.append(f"RAW_{address:04X}:")
+        if mnemonic in ("JMP", "BEQ") and operands and operands[0] in jump_targets:
+            rendered_operands = [f"RAW_{operands[0]:04X}"]
+        else:
+            rendered_operands = [f"0x{value:04X}" for value in operands]
+        lines.append(" ".join([mnemonic] + rendered_operands))
+    if len(words) in jump_targets:
+        lines.append(f"RAW_{len(words):04X}:")
+    return "\n".join(lines)
+
+def _disassemble_raw_bytes(data):
+    if len(data) % 2:
+        return None
+
+    candidates = []
+    for byteorder in ("big", "little"):
+        words = [
+            int.from_bytes(data[index:index + 2], byteorder)
+            for index in range(0, len(data), 2)
+        ]
+        assembly = _disassemble_words(words)
+        if assembly is not None:
+            candidates.append(assembly)
+    if candidates and all(candidate == candidates[0] for candidate in candidates):
+        return candidates[0]
+    return None
+
+def _hex_words_from_text(text):
+    words = []
+    for line in text.splitlines():
+        line = line.strip()
+        if not line or line.lower().startswith("v"):
+            continue
+        if ":" in line:
+            _, line = line.split(":", 1)
+        tokens = line.split()
+        if not tokens or any(not re.fullmatch(r"[0-9a-fA-F]{1,4}", token) for token in tokens):
+            return None
+        words.extend(int(token, 16) for token in tokens)
+    return words if words else None
+
+def _format_hex_words(words):
+    lines = ["; Raw hex data (words):"]
+    lines.extend(
+        "; " + " ".join(f"{word:04X}" for word in words[index:index + 16])
+        for index in range(0, len(words), 16)
+    )
+    return "\n".join(lines)
+
+def _source_from_inserted_file(path):
+    with open(path, "rb") as f:
+        data = f.read()
+
+    try:
+        text = data.decode("utf-8")
+    except UnicodeDecodeError:
+        text = None
+
+    if text is not None and "\x00" not in text and all(
+        char in "\t\r\n" or ord(char) >= 32 for char in text
+    ):
+        if os.path.splitext(path)[1].lower() == ".hex":
+            words = _hex_words_from_text(text)
+            if words is not None:
+                assembly = _disassemble_words(words)
+                if assembly is not None:
+                    return assembly
+                return _format_hex_words(words)
+        return text
+
+    assembly = _disassemble_raw_bytes(data)
+    if assembly is not None:
+        return assembly
+
+    hex_bytes = " ".join(f"{value:02X}" for value in data)
+    return "\n".join(
+        ["; Raw file data (hex):"]
+        + [f"; {hex_bytes[index:index + 96]}" for index in range(0, len(hex_bytes), 96)]
+    )
+
 # ---------- File IO ----------
 def do_open():
     global file_path
@@ -415,6 +531,52 @@ def do_open():
         save_config(save_geometry=False)
     except Exception as e:
         messagebox.showerror("Error", f"Failed to open file:\n{e}")
+
+def insert_files():
+    paths = filedialog.askopenfilenames(
+        title="Select files to insert",
+        filetypes=[("Redstone files", "*.redstone"), ("Text files", "*.txt"), ("All files", "*.*")],
+    )
+    if not paths:
+        return
+
+    try:
+        contents = [_source_from_inserted_file(path) for path in paths]
+    except Exception as e:
+        messagebox.showerror("Error", f"Failed to read selected file:\n{e}")
+        return
+
+    if not any(contents):
+        status_var.set("Selected files contain no text")
+        return
+
+    current_text = input_box.get("1.0", "end-1c")
+    append_line = len(current_text.splitlines()) + 1
+    line_number = simpledialog.askinteger(
+        "Insert files",
+        f"Insert before line (1-{append_line}). Enter {append_line} to append after the last line:",
+        parent=root,
+        minvalue=1,
+        maxvalue=append_line,
+    )
+    if line_number is None:
+        return
+
+    inserted_text = ""
+    for content in contents:
+        if inserted_text and content and not inserted_text.endswith("\n") and not content.startswith("\n"):
+            inserted_text += "\n"
+        inserted_text += content
+    if not inserted_text.endswith("\n"):
+        inserted_text += "\n"
+
+    if line_number == append_line:
+        if current_text and not current_text.endswith("\n"):
+            inserted_text = "\n" + inserted_text
+        input_box.insert("end-1c", inserted_text)
+    else:
+        input_box.insert(f"{line_number}.0", inserted_text)
+    status_var.set(f"Inserted {len(paths)} file(s)")
 
 def do_save():
     global file_path
