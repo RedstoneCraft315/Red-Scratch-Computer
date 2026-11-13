@@ -1,0 +1,40 @@
+; X Cursor: 7FFD
+; Y Cursor: 7FFE
+; Color:	    7FFF
+
+LDA FFFF
+ATR 7FFF
+
+LDA FFFF
+ATR 0010
+
+Draw:
+
+RTA 7FFD
+RTB 0
+XOR
+BEQ StartOfFrame
+RTNStartOfFrame:
+
+RTA 7FFD
+LDB 1
+ADD
+CTR 7FFD
+CTR 7FFF
+RTA 7FFD
+LDB 8
+SHR
+CTR 0000
+RTA 0000
+RTB 0010
+ADD
+CTR 7FFE
+RTD 0 0 0
+JMP Draw
+
+StartOfFrame:
+RTA 0010
+LDB 1
+ADD
+CTR 0010
+JMP RTNStartOfFrame
