@@ -1,0 +1,82 @@
+import <Libraries\OIP.redstone>
+
+XCursor     = 7FFD
+YCursor     = 7FFE
+CursorColor = 7FFF
+
+XCursorMod = 0010
+ShiftedMod = 0011
+CellState  = 0100
+
+CalcRAMAddress = 0200
+
+
+MemoryOffset = 2000
+
+
+LDA F000
+ATR CursorColor
+
+LDA FFFF
+ATR XCursor
+
+Draw:
+RTA XCursor
+LDB 0001
+ADD
+CTR XCursor
+RTA XCursor
+LDB 0008
+SHR
+CTR YCursor
+
+
+
+RTA XCursor
+LDB 0010
+MOD
+CTR XCursorMod
+
+LDA 8000
+RTB XCursorMod
+SHL
+NOP
+CTR ShiftedMod
+
+
+RTA XCursor
+LDB 0010
+DIV
+CTR 0000
+RTA 0000
+LDB MemoryOffset
+ADD
+CTR CalcRAMAddress
+
+LRA CalcRAMAddress 0
+RTB ShiftedMod
+AND
+NOP
+CTR CellState
+
+RTA CellState
+RTB XCursorMod
+SHR
+CTR CellState
+
+RTA CellState
+LDB 0001
+SRL
+CTR CursorColor
+
+RTA CursorColor
+LDB FFFF
+MLT
+CTR CursorColor
+
+
+
+RTD 0 0
+JMP Draw
+
+
