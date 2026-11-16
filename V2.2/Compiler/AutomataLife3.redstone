@@ -1,14 +1,14 @@
-import <Libraries\OIP.redstone>
+import <Libraries\BLOB.asm>
 
 XCursor     = 7FFD
 YCursor     = 7FFE
 CursorColor = 7FFF
 
-XCursorMod = 0010
-ShiftedMod = 0011
-CellState  = 0100
+XCursorMod = 0000
+ShiftedMod = 0001
+CellState  = 0002
 
-CalcRAMAddress = 0200
+CalcRAMAddress = 0003
 
 
 MemoryOffset = 2000
@@ -39,16 +39,15 @@ CTR XCursorMod
 
 LDA 8000
 RTB XCursorMod
-SHL
-NOP
+SHR
 CTR ShiftedMod
 
 
 RTA XCursor
 LDB 0010
 DIV
-CTR 0000
-RTA 0000
+CTR CalcRAMAddress
+RTA CalcRAMAddress
 LDB MemoryOffset
 ADD
 CTR CalcRAMAddress
@@ -56,12 +55,11 @@ CTR CalcRAMAddress
 LRA CalcRAMAddress 0
 RTB ShiftedMod
 AND
-NOP
 CTR CellState
 
 RTA CellState
 RTB XCursorMod
-SHR
+SHL
 CTR CellState
 
 RTA CellState
@@ -78,5 +76,6 @@ CTR CursorColor
 
 RTD 0 0
 JMP Draw
+
 
 
